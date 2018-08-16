@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hywa.pricepublish.dao.mapper.LogMapper">
+  <resultMap id="BaseResultMap" type="com.hywa.pricepublish.dao.entity.Log">
+    <id column="id" jdbcType="CHAR" property="id" />
+    <result column="userId" jdbcType="CHAR" property="userid" />
+    <result column="req_ip" jdbcType="VARCHAR" property="reqIp" />
+    <result column="req_uri" jdbcType="VARCHAR" property="reqUri" />
+    <result column="req_host" jdbcType="VARCHAR" property="reqHost" />
+    <result column="req_port" jdbcType="INTEGER" property="reqPort" />
+    <result column="error_code" jdbcType="SMALLINT" property="errorCode" />
+    <result column="error_message" jdbcType="VARCHAR" property="errorMessage" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="real_error_message" jdbcType="VARCHAR" property="realErrorMessage" />
+    <result column="parameter" jdbcType="VARCHAR" property="parameter" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, 
+    real_error_message, parameter
+  </sql>
+  <select id="selectByExample" parameterType="com.hywa.pricepublish.dao.entity.LogExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from log
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from log
+    where id = #{id,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from log
+    where id = #{id,jdbcType=CHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.hywa.pricepublish.dao.entity.LogExample">
+    delete from log
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.hywa.pricepublish.dao.entity.Log">
+    insert into log (id, userId, req_ip, 
+      req_uri, req_host, req_port, 
+      error_code, error_message, create_time, 
+      real_error_message, parameter)
+    values (#{id,jdbcType=CHAR}, #{userid,jdbcType=CHAR}, #{reqIp,jdbcType=VARCHAR}, 
+      #{reqUri,jdbcType=VARCHAR}, #{reqHost,jdbcType=VARCHAR}, #{reqPort,jdbcType=INTEGER}, 
+      #{errorCode,jdbcType=SMALLINT}, #{errorMessage,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{realErrorMessage,jdbcType=VARCHAR}, #{parameter,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.hywa.pricepublish.dao.entity.Log">
+    insert into log
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userid != null">
+        userId,
+      </if>
+      <if test="reqIp != null">
+        req_ip,
+      </if>
+      <if test="reqUri != null">
+        req_uri,
+      </if>
+      <if test="reqHost != null">
+        req_host,
+      </if>
+      <if test="reqPort != null">
+        req_port,
+      </if>
+      <if test="errorCode != null">
+        error_code,
+      </if>
+      <if test="errorMessage != null">
+        error_message,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="realErrorMessage != null">
+        real_error_message,
+      </if>
+      <if test="parameter != null">
+        parameter,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=CHAR},
+      </if>
+      <if test="userid != null">
+        #{userid,jdbcType=CHAR},
+      </if>
+      <if test="reqIp != null">
+        #{reqIp,jdbcType=VARCHAR},
+      </if>
+      <if test="reqUri != null">
+        #{reqUri,jdbcType=VARCHAR},
+      </if>
+      <if test="reqHost != null">
+        #{reqHost,jdbcType=VARCHAR},
+      </if>
+      <if test="reqPort != null">
+        #{reqPort,jdbcType=INTEGER},
+      </if>
+      <if test="errorCode != null">
+        #{errorCode,jdbcType=SMALLINT},
+      </if>
+      <if test="errorMessage != null">
+        #{errorMessage,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="realErrorMessage != null">
+        #{realErrorMessage,jdbcType=VARCHAR},
+      </if>
+      <if test="parameter != null">
+        #{parameter,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.hywa.pricepublish.dao.entity.LogExample" resultType="java.lang.Integer">
+    select count(*) from log
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update log
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=CHAR},
+      </if>
+      <if test="record.userid != null">
+        userId = #{record.userid,jdbcType=CHAR},
+      </if>
+      <if test="record.reqIp != null">
+        req_ip = #{record.reqIp,jdbcType=VARCHAR},
+      </if>
+      <if test="record.reqUri != null">
+        req_uri = #{record.reqUri,jdbcType=VARCHAR},
+      </if>
+      <if test="record.reqHost != null">
+        req_host = #{record.reqHost,jdbcType=VARCHAR},
+      </if>
+      <if test="record.reqPort != null">
+        req_port = #{record.reqPort,jdbcType=INTEGER},
+      </if>
+      <if test="record.errorCode != null">
+        error_code = #{record.errorCode,jdbcType=SMALLINT},
+      </if>
+      <if test="record.errorMessage != null">
+        error_message = #{record.errorMessage,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.realErrorMessage != null">
+        real_error_message = #{record.realErrorMessage,jdbcType=VARCHAR},
+      </if>
+      <if test="record.parameter != null">
+        parameter = #{record.parameter,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update log
+    set id = #{record.id,jdbcType=CHAR},
+      userId = #{record.userid,jdbcType=CHAR},
+      req_ip = #{record.reqIp,jdbcType=VARCHAR},
+      req_uri = #{record.reqUri,jdbcType=VARCHAR},
+      req_host = #{record.reqHost,jdbcType=VARCHAR},
+      req_port = #{record.reqPort,jdbcType=INTEGER},
+      error_code = #{record.errorCode,jdbcType=SMALLINT},
+      error_message = #{record.errorMessage,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      real_error_message = #{record.realErrorMessage,jdbcType=VARCHAR},
+      parameter = #{record.parameter,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hywa.pricepublish.dao.entity.Log">
+    update log
+    <set>
+      <if test="userid != null">
+        userId = #{userid,jdbcType=CHAR},
+      </if>
+      <if test="reqIp != null">
+        req_ip = #{reqIp,jdbcType=VARCHAR},
+      </if>
+      <if test="reqUri != null">
+        req_uri = #{reqUri,jdbcType=VARCHAR},
+      </if>
+      <if test="reqHost != null">
+        req_host = #{reqHost,jdbcType=VARCHAR},
+      </if>
+      <if test="reqPort != null">
+        req_port = #{reqPort,jdbcType=INTEGER},
+      </if>
+      <if test="errorCode != null">
+        error_code = #{errorCode,jdbcType=SMALLINT},
+      </if>
+      <if test="errorMessage != null">
+        error_message = #{errorMessage,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="realErrorMessage != null">
+        real_error_message = #{realErrorMessage,jdbcType=VARCHAR},
+      </if>
+      <if test="parameter != null">
+        parameter = #{parameter,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hywa.pricepublish.dao.entity.Log">
+    update log
+    set userId = #{userid,jdbcType=CHAR},
+      req_ip = #{reqIp,jdbcType=VARCHAR},
+      req_uri = #{reqUri,jdbcType=VARCHAR},
+      req_host = #{reqHost,jdbcType=VARCHAR},
+      req_port = #{reqPort,jdbcType=INTEGER},
+      error_code = #{errorCode,jdbcType=SMALLINT},
+      error_message = #{errorMessage,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      real_error_message = #{realErrorMessage,jdbcType=VARCHAR},
+      parameter = #{parameter,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=CHAR}
+  </update>
+</mapper>

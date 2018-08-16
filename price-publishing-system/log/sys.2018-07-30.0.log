@@ -1,0 +1,1152 @@
+2018-07-30 08:38:12,013 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 4728 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 08:38:12,018 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 08:38:12,024 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 08:38:19,195 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 7.729 seconds (JVM running for 9.765)
+2018-07-30 09:19:18,784 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 8436 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 09:19:18,785 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 09:19:18,787 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 09:19:23,833 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 5.779 seconds (JVM running for 7.625)
+2018-07-30 09:46:50,580 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info user where user.name = ? 
+2018-07-30 09:46:50,815 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2018-07-30 09:46:50,838 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 09:46:50,881 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select user_id, region_id, type from user_ref_area WHERE ( user_id = ? ) 
+2018-07-30 09:46:50,882 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: b8d11ee289394be688ef3a4f6968efed(String)
+2018-07-30 09:46:50,887 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 09:52:10,438 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11388 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 09:52:10,440 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 09:52:10,441 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 09:52:15,420 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 5.521 seconds (JVM running for 7.413)
+2018-07-30 09:54:23,200 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@552c1ee3
+2018-07-30 09:54:23,200 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_e1b9a78c98434d90ba19ffb2e2df9b95
+2018-07-30 09:54:23,200 INFO (RedisTokenManager.java:33)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=e1b9a78c98434d90ba19ffb2e2df9b95)
+2018-07-30 09:54:23,505 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 09:54:23,918 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 09:54:24,246 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2018-07-30 09:54:24,264 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 09:54:24,267 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_info (id, name, telephone, pwd, account, email, update_time, create_time, update_user, create_user, is_del, job, work_unit, age) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2018-07-30 09:54:24,275 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2cf16b6461004b02a71f7fee8b9c29c4(String), admin(String), null, E10ADC3949BA59ABBE56E057F20F883E(String), null, null, null, null, null, null, 0(Short), null, 慧云网安(String), 12(Integer)
+2018-07-30 09:54:24,277 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 09:54:24,278 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_area (user_id, region_id, type ) values (?, ?, ? ) 
+2018-07-30 09:54:24,279 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2cf16b6461004b02a71f7fee8b9c29c4(String), 520100(String), 2(Short)
+2018-07-30 09:54:24,283 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 09:55:07,447 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@552c1ee3
+2018-07-30 09:55:07,447 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_e1b9a78c98434d90ba19ffb2e2df9b95
+2018-07-30 09:55:07,448 INFO (RedisTokenManager.java:33)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=e1b9a78c98434d90ba19ffb2e2df9b95)
+2018-07-30 09:55:07,450 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 09:55:07,455 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 09:55:07,457 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2018-07-30 09:55:07,458 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 09:55:07,459 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_info (id, name, telephone, pwd, account, email, update_time, create_time, update_user, create_user, is_del, job, work_unit, age) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2018-07-30 09:55:07,461 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 99009f0e33e949caaa90c3802add3c84(String), admin(String), null, E10ADC3949BA59ABBE56E057F20F883E(String), null, null, null, null, null, null, 0(Short), null, 慧云网安(String), 12(Integer)
+2018-07-30 09:55:07,463 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 09:55:07,464 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_area (user_id, region_id, type ) values (?, ?, ? ) 
+2018-07-30 09:55:07,464 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 99009f0e33e949caaa90c3802add3c84(String), 520100(String), 2(Short)
+2018-07-30 09:55:07,466 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 09:55:29,829 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 8972 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 09:55:29,831 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 09:55:29,833 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 09:55:34,911 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 5.734 seconds (JVM running for 7.985)
+2018-07-30 09:55:37,248 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@701431cf
+2018-07-30 09:55:37,249 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_e1b9a78c98434d90ba19ffb2e2df9b95
+2018-07-30 09:55:37,249 INFO (RedisTokenManager.java:33)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=e1b9a78c98434d90ba19ffb2e2df9b95)
+2018-07-30 09:55:37,523 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 09:55:52,069 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 09:55:52,225 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2018-07-30 09:55:52,242 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 09:57:20,546 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_info (id, name, telephone, pwd, account, email, update_time, create_time, update_user, create_user, is_del, job, work_unit, age) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2018-07-30 09:57:20,565 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: c1f440b36eb74daa964dbba79d062632(String), admin(String), null, E10ADC3949BA59ABBE56E057F20F883E(String), null, null, null, null, null, null, 0(Short), null, 慧云网安(String), 12(Integer)
+2018-07-30 09:57:20,572 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 09:57:20,573 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_area (user_id, region_id, type ) values (?, ?, ? ) 
+2018-07-30 09:57:20,574 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: c1f440b36eb74daa964dbba79d062632(String), 520100(String), 2(Short)
+2018-07-30 09:57:20,579 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 09:57:26,406 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 7444 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 09:57:26,407 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 09:57:26,409 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 09:57:31,240 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 5.914 seconds (JVM running for 6.941)
+2018-07-30 09:57:34,354 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@3a383e72
+2018-07-30 09:57:34,355 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_e1b9a78c98434d90ba19ffb2e2df9b95
+2018-07-30 09:57:34,355 INFO (RedisTokenManager.java:33)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=e1b9a78c98434d90ba19ffb2e2df9b95)
+2018-07-30 09:57:34,632 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 09:57:37,632 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 09:57:37,808 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2018-07-30 09:57:38,085 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 09:58:52,250 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_info (id, name, telephone, pwd, account, email, update_time, create_time, update_user, create_user, is_del, job, work_unit, age) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2018-07-30 09:58:52,270 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2aafbdacc3ff4e97aa78fa9ae47ac15e(String), admin(String), null, E10ADC3949BA59ABBE56E057F20F883E(String), null, null, null, null, null, null, 0(Short), null, 慧云网安(String), 12(Integer)
+2018-07-30 09:58:52,278 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 09:58:52,279 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_area (user_id, region_id, type ) values (?, ?, ? ) 
+2018-07-30 09:58:52,280 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2aafbdacc3ff4e97aa78fa9ae47ac15e(String), 520100(String), 2(Short)
+2018-07-30 09:58:52,287 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 09:58:57,525 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 8752 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 09:58:57,527 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 09:58:57,529 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 09:59:02,386 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 5.739 seconds (JVM running for 6.733)
+2018-07-30 09:59:05,220 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@5c4ecba2
+2018-07-30 09:59:05,221 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_e1b9a78c98434d90ba19ffb2e2df9b95
+2018-07-30 09:59:05,221 INFO (RedisTokenManager.java:33)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=e1b9a78c98434d90ba19ffb2e2df9b95)
+2018-07-30 09:59:05,503 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 09:59:05,907 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 09:59:06,044 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2018-07-30 09:59:06,063 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 09:59:06,300 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/add<:=====:>POST<:=====:>null<:=====:>用户名称已经存在
+2018-07-30 09:59:06,301 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 09:59:06,314 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 26de598f44e046edb4ea0cc1b7fa327a(String), 临时用户(String), 192.168.1.81(String), /user/add(String), 192.168.1.81(String), 4160(Integer), 1006(Short), 用户名称已经存在(String), 2018-07-30 09:59:06.3(Timestamp), 用户名称已经存在(String), null
+2018-07-30 09:59:06,364 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 10:04:12,026 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@5c4ecba2
+2018-07-30 10:04:12,027 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_e1b9a78c98434d90ba19ffb2e2df9b95
+2018-07-30 10:04:12,027 INFO (RedisTokenManager.java:33)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=e1b9a78c98434d90ba19ffb2e2df9b95)
+2018-07-30 10:04:12,029 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 10:04:12,036 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 10:04:12,036 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: adminv(String)
+2018-07-30 10:04:12,038 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 10:04:12,039 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_info (id, name, telephone, pwd, account, email, update_time, create_time, update_user, create_user, is_del, job, work_unit, age) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2018-07-30 10:04:12,041 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: d2e68d7893044f0aa2cf2de8fb5b5340(String), adminv(String), null, E10ADC3949BA59ABBE56E057F20F883E(String), null, null, null, null, null, null, 0(Short), null, 慧云网安(String), 12(Integer)
+2018-07-30 10:04:12,044 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 10:04:12,044 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_area (user_id, region_id, type ) values (?, ?, ? ) 
+2018-07-30 10:04:12,045 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: d2e68d7893044f0aa2cf2de8fb5b5340(String), 520100(String), 2(Short)
+2018-07-30 10:04:12,050 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 10:04:33,799 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@5c4ecba2
+2018-07-30 10:04:33,800 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_e1b9a78c98434d90ba19ffb2e2df9b95
+2018-07-30 10:04:33,800 INFO (RedisTokenManager.java:33)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=e1b9a78c98434d90ba19ffb2e2df9b95)
+2018-07-30 10:04:33,802 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 10:04:33,805 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 10:04:33,806 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2018-07-30 10:04:33,807 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 10:04:33,811 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/add<:=====:>POST<:=====:>null<:=====:>用户名称已经存在
+2018-07-30 10:04:33,812 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 10:04:33,813 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: e08d20a7719e494c896800019eb52341(String), 临时用户(String), 192.168.1.81(String), /user/add(String), 192.168.1.81(String), 4277(Integer), 1006(Short), 用户名称已经存在(String), 2018-07-30 10:04:33.811(Timestamp), 用户名称已经存在(String), null
+2018-07-30 10:04:33,842 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 10:17:15,146 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/logout<:=====:>DELETE<:=====:>null<:=====:>Required String parameter 'userId' is not present
+2018-07-30 10:17:15,158 ERROR (GlobalDefaultExceptionHandler.java:85)- class org.springframework.web.bind.MissingServletRequestParameterException:Required String parameter 'userId' is not present
+2018-07-30 10:17:15,162 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 10:17:15,165 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 4b5b31dc128948669e8a1ad32d16a507(String), 临时用户(String), 192.168.1.81(String), /user/logout(String), 192.168.1.81(String), 4580(Integer), null, null, 2018-07-30 10:17:15.146(Timestamp), Required String parameter 'userId' is not present(String), null
+2018-07-30 10:17:15,206 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 10:17:27,756 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/logout<:=====:>DELETE<:=====:>null<:=====:>Required String parameter 'userId' is not present
+2018-07-30 10:17:27,757 ERROR (GlobalDefaultExceptionHandler.java:85)- class org.springframework.web.bind.MissingServletRequestParameterException:Required String parameter 'userId' is not present
+2018-07-30 10:17:27,758 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 10:17:27,762 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 458c8f4a48404d33bfff3381a93ff3a5(String), 临时用户(String), 192.168.1.81(String), /user/logout(String), 192.168.1.81(String), 4580(Integer), null, null, 2018-07-30 10:17:27.756(Timestamp), Required String parameter 'userId' is not present(String), null
+2018-07-30 10:17:27,789 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 10:17:46,241 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/logout<:=====:>DELETE<:=====:>null<:=====:>Required String parameter 'userId' is not present
+2018-07-30 10:17:46,241 ERROR (GlobalDefaultExceptionHandler.java:85)- class org.springframework.web.bind.MissingServletRequestParameterException:Required String parameter 'userId' is not present
+2018-07-30 10:17:46,242 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 10:17:46,242 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: d971ae1bd2f54051b86fec0195e50f0d(String), 临时用户(String), 192.168.1.81(String), /user/logout(String), 192.168.1.81(String), 4580(Integer), null, null, 2018-07-30 10:17:46.241(Timestamp), Required String parameter 'userId' is not present(String), null
+2018-07-30 10:17:46,272 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 10:18:19,068 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@5c4ecba2
+2018-07-30 10:18:19,069 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_e1b9a78c98434d90ba19ffb2e2df9b95
+2018-07-30 10:18:19,069 INFO (RedisTokenManager.java:33)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=e1b9a78c98434d90ba19ffb2e2df9b95)
+2018-07-30 10:29:33,270 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info user where user.name = ? 
+2018-07-30 10:29:33,454 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2018-07-30 10:29:33,504 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 10:29:33,530 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select user_id, region_id, type from user_ref_area WHERE ( user_id = ? ) 
+2018-07-30 10:29:33,531 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: b8d11ee289394be688ef3a4f6968efed(String)
+2018-07-30 10:29:33,534 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 10:30:19,360 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM user_info WHERE is_del = 0 
+2018-07-30 10:30:19,373 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-07-30 10:30:19,377 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 10:30:19,384 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select id, name, telephone, account, email, create_time, create_user, job, work_unit, age from user_info where is_del=0 LIMIT ? 
+2018-07-30 10:30:19,391 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 10(Integer)
+2018-07-30 10:30:19,395 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 9
+2018-07-30 10:33:07,466 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11612 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 10:33:07,468 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 10:33:07,469 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 10:33:13,324 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 6.654 seconds (JVM running for 8.687)
+2018-07-30 10:33:16,261 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM user_info WHERE is_del = 0 
+2018-07-30 10:33:16,396 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-07-30 10:33:16,413 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 10:33:16,419 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select id, name, telephone, account, email, create_time, create_user, job, work_unit, age from user_info where is_del=0 LIMIT ? 
+2018-07-30 10:33:16,423 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 10(Integer)
+2018-07-30 10:33:16,430 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 9
+2018-07-30 10:33:42,820 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11608 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 10:33:42,827 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 10:33:42,829 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 10:33:47,993 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 6.019 seconds (JVM running for 7.379)
+2018-07-30 10:33:50,930 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM user_info WHERE is_del = 0 
+2018-07-30 10:33:51,098 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-07-30 10:33:51,122 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 10:33:51,129 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select id, name, telephone, account, email, create_time, create_user, job, work_unit, age from user_info where is_del=0 LIMIT ? 
+2018-07-30 10:33:51,133 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 10(Integer)
+2018-07-30 10:33:51,143 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 9
+2018-07-30 10:38:23,523 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10604 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 10:38:23,526 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 10:38:23,528 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 10:38:30,054 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 7.292 seconds (JVM running for 8.994)
+2018-07-30 10:38:33,631 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM user_info WHERE is_del = 0 
+2018-07-30 10:38:33,899 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-07-30 10:38:33,922 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 10:38:33,929 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select id, name, telephone, account, email, create_time, create_user, job, work_unit, age from user_info where is_del=0 LIMIT ? 
+2018-07-30 10:38:33,933 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 10(Integer)
+2018-07-30 10:38:33,940 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 9
+2018-07-30 10:50:56,035 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 1916 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 10:50:56,037 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 10:50:56,039 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 10:51:01,301 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 6.193 seconds (JVM running for 8.024)
+2018-07-30 10:51:39,579 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM user_info WHERE is_del = 0 
+2018-07-30 10:51:39,716 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-07-30 10:51:39,735 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 10:51:39,739 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select id, name, telephone, account, email, create_time, create_user, job, work_unit, age from user_info where is_del=0 LIMIT ? 
+2018-07-30 10:51:39,743 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 10(Integer)
+2018-07-30 10:51:39,748 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 9
+2018-07-30 10:53:40,825 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 8652 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 10:53:40,828 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 10:53:40,830 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 10:53:48,484 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 8.625 seconds (JVM running for 10.068)
+2018-07-30 10:56:57,981 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM user_info WHERE is_del = 0 
+2018-07-30 10:56:58,148 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-07-30 10:56:58,171 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 10:56:58,178 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select id, name, telephone, account, email, create_time, create_user, job, work_unit, age from user_info where is_del=0 LIMIT ? 
+2018-07-30 10:56:58,182 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 10(Integer)
+2018-07-30 10:56:58,190 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 9
+2018-07-30 11:00:56,187 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11584 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 11:00:56,189 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 11:00:56,191 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 11:01:02,048 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 6.765 seconds (JVM running for 9.303)
+2018-07-30 11:01:11,337 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM user_info WHERE is_del = 0 
+2018-07-30 11:01:11,509 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-07-30 11:01:11,529 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 11:01:11,533 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: /*性别字段未添加*/ select id, name, telephone, account, email, create_time,sex, create_user, job, work_unit, age from user_info where is_del=0 LIMIT ? 
+2018-07-30 11:01:11,537 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 10(Integer)
+2018-07-30 11:01:11,542 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 9
+2018-07-30 11:10:44,851 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@2999cbac
+2018-07-30 11:10:44,852 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_e1b9a78c98434d90ba19ffb2e2df9b95
+2018-07-30 11:10:44,852 INFO (RedisTokenManager.java:37)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=e1b9a78c98434d90ba19ffb2e2df9b95)
+2018-07-30 11:10:58,768 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@2999cbac
+2018-07-30 11:10:58,768 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_14d136e80a7b4998ac6a45c02dc49dfd
+2018-07-30 11:10:58,769 INFO (RedisTokenManager.java:37)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=14d136e80a7b4998ac6a45c02dc49dfd)
+2018-07-30 11:10:58,776 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 11:10:58,966 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 11:10:58,968 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: jzz(String)
+2018-07-30 11:10:58,970 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 11:10:58,971 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_info (id, name, telephone, pwd, account, email, update_time, create_time, update_user, create_user, is_del, job, work_unit, age) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2018-07-30 11:10:58,991 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 9960267a094e484fa77601dd66c5f2b9(String), jzz(String), null, E10ADC3949BA59ABBE56E057F20F883E(String), null, null, null, null, null, null, 0(Short), null, 慧云网安(String), 18(Integer)
+2018-07-30 11:10:58,995 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 11:10:58,996 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_area (user_id, region_id, type ) values (?, ?, ? ) 
+2018-07-30 11:10:58,997 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 9960267a094e484fa77601dd66c5f2b9(String), 520100(String), 2(Short)
+2018-07-30 11:10:59,003 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 11:12:27,454 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: delete from user_ref_role where user_id = ? 
+2018-07-30 11:12:27,457 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 9960267a094e484fa77601dd66c5f2b9(String)
+2018-07-30 11:12:27,462 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 0
+2018-07-30 11:12:27,471 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/updateRole<:=====:>PUT<:=====:>userId=9960267a094e484fa77601dd66c5f2b9<:=====:>null
+2018-07-30 11:12:27,473 ERROR (GlobalDefaultExceptionHandler.java:85)- class java.lang.NullPointerException:null
+2018-07-30 11:12:27,473 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 11:12:27,476 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 153c6a1829a844e2aa1e19b70aaeb31e(String), 临时用户(String), 192.168.1.81(String), /user/updateRole(String), 192.168.1.81(String), 6478(Integer), null, null, 2018-07-30 11:12:27.471(Timestamp), null, userId=9960267a094e484fa77601dd66c5f2b9(String)
+2018-07-30 11:12:27,523 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 11:12:46,922 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: delete from user_ref_role where user_id = ? 
+2018-07-30 11:12:46,923 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 9960267a094e484fa77601dd66c5f2b9(String)
+2018-07-30 11:12:46,924 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 0
+2018-07-30 11:12:46,928 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/updateRole<:=====:>PUT<:=====:>userId=9960267a094e484fa77601dd66c5f2b9<:=====:>null
+2018-07-30 11:12:46,928 ERROR (GlobalDefaultExceptionHandler.java:85)- class java.lang.NullPointerException:null
+2018-07-30 11:12:46,928 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 11:12:46,930 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 346a2b6bce9945a5ae6f12239fb2654c(String), 临时用户(String), 192.168.1.81(String), /user/updateRole(String), 192.168.1.81(String), 6478(Integer), null, null, 2018-07-30 11:12:46.927(Timestamp), null, userId=9960267a094e484fa77601dd66c5f2b9(String)
+2018-07-30 11:12:46,972 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 11:12:54,736 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: delete from user_ref_role where user_id = ? 
+2018-07-30 11:12:54,737 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 9960267a094e484fa77601dd66c5f2b9(String)
+2018-07-30 11:12:54,743 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 0
+2018-07-30 11:12:54,749 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/updateRole<:=====:>PUT<:=====:>userId=9960267a094e484fa77601dd66c5f2b9<:=====:>null
+2018-07-30 11:12:54,749 ERROR (GlobalDefaultExceptionHandler.java:85)- class java.lang.NullPointerException:null
+2018-07-30 11:12:54,750 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 11:12:54,751 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 174b01f674174ea48ef9e88198ff0d10(String), 临时用户(String), 192.168.1.81(String), /user/updateRole(String), 192.168.1.81(String), 6478(Integer), null, null, 2018-07-30 11:12:54.749(Timestamp), null, userId=9960267a094e484fa77601dd66c5f2b9(String)
+2018-07-30 11:12:54,779 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 11:13:51,706 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: delete from user_ref_role where user_id = ? 
+2018-07-30 11:13:51,706 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 9960267a094e484fa77601dd66c5f2b9(String)
+2018-07-30 11:13:51,708 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 0
+2018-07-30 11:13:56,086 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/updateRole<:=====:>PUT<:=====:>userId=9960267a094e484fa77601dd66c5f2b9<:=====:>null
+2018-07-30 11:13:56,086 ERROR (GlobalDefaultExceptionHandler.java:85)- class java.lang.NullPointerException:null
+2018-07-30 11:13:56,087 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 11:13:56,087 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 7ced857d39954646a9338a70834590a8(String), 临时用户(String), 192.168.1.81(String), /user/updateRole(String), 192.168.1.81(String), 6478(Integer), null, null, 2018-07-30 11:13:56.086(Timestamp), null, userId=9960267a094e484fa77601dd66c5f2b9(String)
+2018-07-30 11:13:56,135 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 11:23:37,134 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 392 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 11:23:37,136 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 11:23:37,138 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 11:23:45,648 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 9.508 seconds (JVM running for 11.826)
+2018-07-30 11:28:54,336 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 8508 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 11:28:54,339 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 11:28:54,341 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 11:29:01,351 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 7.898 seconds (JVM running for 10.13)
+2018-07-30 11:30:26,601 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 5768 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 11:30:26,602 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 11:30:26,603 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 11:30:33,698 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 7.938 seconds (JVM running for 9.866)
+2018-07-30 11:30:41,947 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 2964 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 11:30:41,949 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 11:30:41,950 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 11:30:47,847 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 6.826 seconds (JVM running for 8.631)
+2018-07-30 11:31:09,013 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/login<:=====:>GET<:=====:>accessToken=42c1c949e62e48f98dae0f2407b70556&userName=admin&pwd=123456&type=1<:=====:>Required String parameter 'psw' is not present
+2018-07-30 11:31:09,015 ERROR (GlobalDefaultExceptionHandler.java:85)- class org.springframework.web.bind.MissingServletRequestParameterException:Required String parameter 'psw' is not present
+2018-07-30 11:31:09,424 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 11:31:09,533 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 7ee68c9a443e403680a7ff914f9b02b6(String), 临时用户(String), 192.168.1.35(String), /user/login(String), 192.168.1.35(String), 62069(Integer), null, null, 2018-07-30 11:31:09.013(Timestamp), Required String parameter 'psw' is not present(String), accessToken=42c1c949e62e48f98dae0f2407b70556&userName=admin&pwd=123456&type=1(String)
+2018-07-30 11:31:09,572 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 11:33:01,661 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 5604 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 11:33:01,663 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 11:33:01,681 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 11:33:08,996 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 8.302 seconds (JVM running for 10.839)
+2018-07-30 11:33:24,959 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info user where user.name = ? 
+2018-07-30 11:33:25,116 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2018-07-30 11:33:25,140 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 11:33:25,185 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select user_id, region_id, type from user_ref_area WHERE ( user_id = ? ) 
+2018-07-30 11:33:25,186 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: b8d11ee289394be688ef3a4f6968efed(String)
+2018-07-30 11:33:25,189 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 11:33:32,244 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/login<:=====:>GET<:=====:>accessToken=42c1c949e62e48f98dae0f2407b70556&userName=admin&pwd=123456&type=1<:=====:>Required String parameter 'passWord' is not present
+2018-07-30 11:33:32,247 ERROR (GlobalDefaultExceptionHandler.java:85)- class org.springframework.web.bind.MissingServletRequestParameterException:Required String parameter 'passWord' is not present
+2018-07-30 11:33:32,248 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 11:33:32,259 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: e2d8332d1ac245eeb48f88ebca50fae6(String), 临时用户(String), 192.168.1.35(String), /user/login(String), 192.168.1.35(String), 62355(Integer), null, null, 2018-07-30 11:33:32.244(Timestamp), Required String parameter 'passWord' is not present(String), accessToken=42c1c949e62e48f98dae0f2407b70556&userName=admin&pwd=123456&type=1(String)
+2018-07-30 11:33:32,306 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 11:34:30,796 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11428 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 11:34:30,798 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 11:34:30,800 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 11:34:36,469 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 6.467 seconds (JVM running for 8.26)
+2018-07-30 11:34:43,506 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info user where user.name = ? 
+2018-07-30 11:34:43,641 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2018-07-30 11:34:43,661 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 11:34:43,692 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select user_id, region_id, type from user_ref_area WHERE ( user_id = ? ) 
+2018-07-30 11:34:43,694 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: b8d11ee289394be688ef3a4f6968efed(String)
+2018-07-30 11:34:43,696 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 11:35:01,636 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info user where user.name = ? 
+2018-07-30 11:35:01,638 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2018-07-30 11:35:01,642 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 11:35:01,645 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select user_id, region_id, type from user_ref_area WHERE ( user_id = ? ) 
+2018-07-30 11:35:01,646 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: b8d11ee289394be688ef3a4f6968efed(String)
+2018-07-30 11:35:01,649 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 11:36:13,179 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 11:36:13,181 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 11:36:13,182 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 11:36:19,403 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 7.42 seconds (JVM running for 9.069)
+2018-07-30 11:39:42,569 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 11:39:42,575 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 11:39:42,576 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 11:39:46,030 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.55 seconds (JVM running for 215.689)
+2018-07-30 11:47:38,210 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 11:47:38,211 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 11:47:38,212 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 11:47:43,062 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 4.977 seconds (JVM running for 692.707)
+2018-07-30 11:47:48,426 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 11:47:48,429 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 11:47:48,429 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 11:47:51,441 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.059 seconds (JVM running for 701.085)
+2018-07-30 11:53:14,609 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info user where user.name = ? 
+2018-07-30 11:53:14,784 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2018-07-30 11:53:14,802 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 11:53:14,846 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select user_id, region_id, type from user_ref_area WHERE ( user_id = ? ) 
+2018-07-30 11:53:14,847 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: b8d11ee289394be688ef3a4f6968efed(String)
+2018-07-30 11:53:14,849 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 11:53:16,993 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info user where user.name = ? 
+2018-07-30 11:53:16,994 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2018-07-30 11:53:16,998 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 11:53:16,999 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select user_id, region_id, type from user_ref_area WHERE ( user_id = ? ) 
+2018-07-30 11:53:17,000 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: b8d11ee289394be688ef3a4f6968efed(String)
+2018-07-30 11:53:17,002 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 13:46:39,190 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 13:46:39,191 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 13:46:39,191 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 13:46:43,379 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 4.258 seconds (JVM running for 7832.791)
+2018-07-30 13:46:50,343 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 13:46:50,343 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 13:46:50,343 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 13:46:54,486 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 4.186 seconds (JVM running for 7843.898)
+2018-07-30 13:47:03,766 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 13:47:03,767 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 13:47:03,767 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 13:47:07,558 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.843 seconds (JVM running for 7856.97)
+2018-07-30 13:47:25,391 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 13:47:25,391 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 13:47:25,391 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 13:47:28,167 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 2.82 seconds (JVM running for 7877.578)
+2018-07-30 13:51:14,751 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 13:51:14,754 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 13:51:14,755 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 13:51:18,072 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.503 seconds (JVM running for 8107.476)
+2018-07-30 13:52:32,128 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 13:52:32,129 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 13:52:32,129 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 13:52:36,183 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 4.108 seconds (JVM running for 8185.585)
+2018-07-30 13:56:29,191 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 13:56:29,191 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 13:56:29,191 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 13:56:32,491 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.374 seconds (JVM running for 8421.885)
+2018-07-30 13:56:35,416 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 13:56:35,417 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 13:56:35,417 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 13:56:39,262 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.914 seconds (JVM running for 8428.656)
+2018-07-30 13:56:44,563 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 13:56:44,563 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 13:56:44,563 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 13:56:51,375 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 7.397 seconds (JVM running for 8440.768)
+2018-07-30 13:56:54,625 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 13:56:54,625 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 13:56:54,634 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 13:56:58,170 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.616 seconds (JVM running for 8447.563)
+2018-07-30 13:57:00,542 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 13:57:00,546 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 13:57:00,546 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 13:57:04,618 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 4.133 seconds (JVM running for 8454.011)
+2018-07-30 13:57:09,295 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 13:57:09,296 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 13:57:09,297 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 13:57:11,938 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 2.767 seconds (JVM running for 8461.33)
+2018-07-30 13:57:38,410 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 13:57:38,410 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 13:57:38,410 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 13:57:46,760 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 13:57:46,760 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 13:57:46,760 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 13:57:50,296 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.577 seconds (JVM running for 8499.687)
+2018-07-30 13:58:05,252 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 13:58:05,253 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 13:58:05,253 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 13:58:30,278 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 13:58:30,279 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 13:58:30,279 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 13:59:34,777 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 13:59:34,778 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 13:59:34,778 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 13:59:40,003 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 5.26 seconds (JVM running for 8609.391)
+2018-07-30 13:59:43,789 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 13:59:43,790 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 13:59:43,790 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 13:59:45,340 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 1.584 seconds (JVM running for 8614.728)
+2018-07-30 14:00:21,782 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:00:21,783 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:00:21,783 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:00:27,111 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 6.069 seconds (JVM running for 8656.497)
+2018-07-30 14:01:12,580 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:01:12,582 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:01:12,582 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:01:29,028 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:01:29,028 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:01:29,028 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:01:36,061 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:01:36,061 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:01:36,062 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:01:53,178 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:01:53,178 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:01:53,178 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:01:57,884 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 4.758 seconds (JVM running for 8747.267)
+2018-07-30 14:02:07,430 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:02:07,431 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:02:07,431 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:02:27,356 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:02:27,358 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:02:27,358 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:02:34,497 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 7.447 seconds (JVM running for 8783.879)
+2018-07-30 14:02:48,569 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:02:48,569 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:02:48,570 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:02:53,760 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 5.258 seconds (JVM running for 8803.141)
+2018-07-30 14:02:58,977 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:02:58,978 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:02:58,978 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:03:02,430 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.491 seconds (JVM running for 8811.811)
+2018-07-30 14:03:06,604 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:03:06,604 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:03:06,605 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:03:09,229 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 2.668 seconds (JVM running for 8818.61)
+2018-07-30 14:03:36,475 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:03:36,475 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:03:36,476 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:03:40,663 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 4.226 seconds (JVM running for 8850.043)
+2018-07-30 14:04:12,140 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:04:12,150 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:04:12,150 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:04:14,809 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 2.718 seconds (JVM running for 8884.184)
+2018-07-30 14:04:53,949 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:04:53,949 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:04:53,950 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:04:56,627 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 2.762 seconds (JVM running for 8926.005)
+2018-07-30 14:05:19,227 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:05:19,228 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:05:19,229 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:05:22,777 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.591 seconds (JVM running for 8952.153)
+2018-07-30 14:06:59,436 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:06:59,439 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:06:59,440 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:07:19,980 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 20.93 seconds (JVM running for 9069.353)
+2018-07-30 14:07:43,030 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10544 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:07:43,031 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:07:43,031 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:07:45,586 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 2.678 seconds (JVM running for 9094.958)
+2018-07-30 14:08:12,229 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@6a798d0e
+2018-07-30 14:08:12,230 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_14d136e80a7b4998ac6a45c02dc49dfd
+2018-07-30 14:08:12,231 INFO (RedisTokenManager.java:37)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=14d136e80a7b4998ac6a45c02dc49dfd)
+2018-07-30 14:08:16,006 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info user where user.name = ? 
+2018-07-30 14:08:16,020 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2018-07-30 14:08:16,025 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 14:08:16,031 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select user_id, region_id, type from user_ref_area WHERE ( user_id = ? ) 
+2018-07-30 14:08:16,032 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: b8d11ee289394be688ef3a4f6968efed(String)
+2018-07-30 14:08:16,033 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 14:08:58,688 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info user where user.name = ? 
+2018-07-30 14:08:58,689 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2018-07-30 14:08:58,693 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 14:08:58,695 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select user_id, region_id, type from user_ref_area WHERE ( user_id = ? ) 
+2018-07-30 14:08:58,695 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: b8d11ee289394be688ef3a4f6968efed(String)
+2018-07-30 14:08:58,732 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 14:09:04,637 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@6a798d0e
+2018-07-30 14:09:04,637 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_92d4eb57532e4dcaa668d4b113405c0f
+2018-07-30 14:09:04,637 INFO (RedisTokenManager.java:37)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=92d4eb57532e4dcaa668d4b113405c0f)
+2018-07-30 14:09:04,660 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 14:09:04,941 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 14:09:04,945 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: jzzv(String)
+2018-07-30 14:09:04,948 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 14:09:04,949 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_info (id, name, telephone, pwd, account, email, update_time, create_time, update_user, create_user, is_del, job, work_unit, age) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2018-07-30 14:09:04,972 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 4f401ebe9a5e4883a929329bb076248d(String), jzzv(String), null, E10ADC3949BA59ABBE56E057F20F883E(String), null, null, null, null, null, null, 0(Short), null, 慧云网安(String), 18(Integer)
+2018-07-30 14:09:04,975 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:09:04,976 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_area (user_id, region_id, type ) values (?, ?, ? ) 
+2018-07-30 14:09:04,977 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 4f401ebe9a5e4883a929329bb076248d(String), 520100(String), 2(Short)
+2018-07-30 14:09:04,984 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:09:48,644 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@6a798d0e
+2018-07-30 14:09:48,644 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_92d4eb57532e4dcaa668d4b113405c0f
+2018-07-30 14:09:48,644 INFO (RedisTokenManager.java:37)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=92d4eb57532e4dcaa668d4b113405c0f)
+2018-07-30 14:09:48,648 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 14:09:48,653 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 14:09:48,690 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: jzzv(String)
+2018-07-30 14:09:48,692 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 14:09:48,693 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_info (id, name, telephone, pwd, account, email, update_time, create_time, update_user, create_user, is_del, job, work_unit, age) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2018-07-30 14:09:48,694 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 58cb07c546a8487fbe7c9a29afa083ef(String), jzzv(String), null, E10ADC3949BA59ABBE56E057F20F883E(String), null, null, null, null, null, null, 0(Short), null, 慧云网安(String), 18(Integer)
+2018-07-30 14:09:48,696 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:09:48,697 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_area (user_id, region_id, type ) values (?, ?, ? ) 
+2018-07-30 14:09:48,698 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 58cb07c546a8487fbe7c9a29afa083ef(String), 520100(String), 2(Short)
+2018-07-30 14:09:48,699 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:11:41,860 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@6a798d0e
+2018-07-30 14:11:41,868 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_92d4eb57532e4dcaa668d4b113405c0f
+2018-07-30 14:11:41,868 INFO (RedisTokenManager.java:37)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=92d4eb57532e4dcaa668d4b113405c0f)
+2018-07-30 14:11:41,917 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 14:11:42,434 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 14:11:42,457 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: jzzv(String)
+2018-07-30 14:11:42,471 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 14:11:42,483 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_info (id, name, telephone, pwd, account, email, update_time, create_time, update_user, create_user, is_del, job, work_unit, age) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2018-07-30 14:11:42,489 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: b951c90c98724b6d910c0970d0d8e8c3(String), jzzv(String), null, E10ADC3949BA59ABBE56E057F20F883E(String), null, null, null, null, null, null, 0(Short), null, 慧云网安(String), 18(Integer)
+2018-07-30 14:11:42,496 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:11:42,499 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_area (user_id, region_id, type ) values (?, ?, ? ) 
+2018-07-30 14:11:42,503 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: b951c90c98724b6d910c0970d0d8e8c3(String), 520100(String), 2(Short)
+2018-07-30 14:11:42,506 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:12:02,610 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 8484 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:12:02,611 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:12:02,613 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:12:10,461 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 9.345 seconds (JVM running for 12.518)
+2018-07-30 14:12:39,418 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 8484 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:12:39,419 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:12:39,420 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:12:42,670 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.35 seconds (JVM running for 44.726)
+2018-07-30 14:12:49,490 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@5aa5e356
+2018-07-30 14:12:49,490 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_92d4eb57532e4dcaa668d4b113405c0f
+2018-07-30 14:12:49,491 INFO (RedisTokenManager.java:37)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=92d4eb57532e4dcaa668d4b113405c0f)
+2018-07-30 14:12:50,107 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 14:13:15,774 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 9824 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:13:15,776 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:13:15,779 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:13:27,630 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 12.512 seconds (JVM running for 15.096)
+2018-07-30 14:13:33,480 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@397fc683
+2018-07-30 14:13:33,481 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_92d4eb57532e4dcaa668d4b113405c0f
+2018-07-30 14:13:33,481 INFO (RedisTokenManager.java:37)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=92d4eb57532e4dcaa668d4b113405c0f)
+2018-07-30 14:13:34,336 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 14:13:35,325 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 14:13:35,461 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: jzzv(String)
+2018-07-30 14:13:35,479 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 14:13:35,496 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/add<:=====:>POST<:=====:>null<:=====:>用户名称已经存在
+2018-07-30 14:13:35,497 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 14:13:35,510 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 4bd6570956d4497781b7bc07efbb84a3(String), 临时用户(String), 192.168.1.81(String), /user/add(String), 192.168.1.81(String), 11277(Integer), 1006(Short), 用户名称已经存在(String), 2018-07-30 14:13:35.496(Timestamp), 用户名称已经存在(String), null
+2018-07-30 14:13:35,544 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:14:04,527 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@397fc683
+2018-07-30 14:14:04,527 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_92d4eb57532e4dcaa668d4b113405c0f
+2018-07-30 14:14:04,527 INFO (RedisTokenManager.java:37)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=92d4eb57532e4dcaa668d4b113405c0f)
+2018-07-30 14:14:04,529 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 14:14:04,533 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 14:14:04,534 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: jzzv(String)
+2018-07-30 14:14:04,536 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 14:14:04,537 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_info (id, name, telephone, pwd, account, email, update_time, create_time, update_user, create_user, is_del, job, work_unit, age) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2018-07-30 14:14:04,539 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: f4232d8ff1ec43e493b6938c75fec6ea(String), jzzv(String), null, E10ADC3949BA59ABBE56E057F20F883E(String), null, null, null, null, null, null, 0(Short), null, 慧云网安(String), 18(Integer)
+2018-07-30 14:14:04,542 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:14:04,543 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_area (user_id, region_id, type ) values (?, ?, ? ) 
+2018-07-30 14:14:04,545 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: f4232d8ff1ec43e493b6938c75fec6ea(String), 520100(String), 2(Short)
+2018-07-30 14:14:04,554 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:14:29,127 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 5192 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:14:29,128 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:14:29,132 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:14:38,802 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 11.135 seconds (JVM running for 13.167)
+2018-07-30 14:16:28,070 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 5192 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:16:28,071 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:16:28,071 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:16:32,222 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 4.29 seconds (JVM running for 126.583)
+2018-07-30 14:16:35,102 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 5192 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:16:35,103 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:16:35,103 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:16:39,386 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 4.332 seconds (JVM running for 133.747)
+2018-07-30 14:16:56,398 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 5192 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:16:56,399 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:16:56,399 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:16:58,918 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 2.576 seconds (JVM running for 153.278)
+2018-07-30 14:17:24,942 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@442c6d47
+2018-07-30 14:17:24,943 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_92d4eb57532e4dcaa668d4b113405c0f
+2018-07-30 14:17:24,943 INFO (RedisTokenManager.java:37)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=92d4eb57532e4dcaa668d4b113405c0f)
+2018-07-30 14:17:25,855 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 14:17:26,609 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 14:17:26,757 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: jzzv(String)
+2018-07-30 14:17:26,778 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 14:17:26,791 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/add<:=====:>POST<:=====:>null<:=====:>用户名称已经存在
+2018-07-30 14:17:26,792 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 14:17:26,802 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: c77a607591a440fcaf9400c673960ac8(String), 临时用户(String), 192.168.1.81(String), /user/add(String), 192.168.1.81(String), 11888(Integer), 1006(Short), 用户名称已经存在(String), 2018-07-30 14:17:26.791(Timestamp), 用户名称已经存在(String), null
+2018-07-30 14:17:26,834 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:18:04,758 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 5192 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:18:04,759 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:18:04,759 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:18:07,302 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 2.586 seconds (JVM running for 221.66)
+2018-07-30 14:18:16,083 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@54603011
+2018-07-30 14:18:16,084 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_92d4eb57532e4dcaa668d4b113405c0f
+2018-07-30 14:18:16,085 INFO (RedisTokenManager.java:37)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=92d4eb57532e4dcaa668d4b113405c0f)
+2018-07-30 14:18:16,100 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 14:18:16,177 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 14:18:16,179 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: jzzv(String)
+2018-07-30 14:18:16,181 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 14:18:16,182 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_info (id, name, telephone, pwd, account, email, update_time, create_time, update_user, create_user, is_del, job, work_unit, age) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2018-07-30 14:18:16,184 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 406bb699ac064df282f2aadfd02ac4e8(String), jzzv(String), null, E10ADC3949BA59ABBE56E057F20F883E(String), null, null, null, null, null, null, 0(Short), null, 慧云网安(String), 18(Integer)
+2018-07-30 14:18:16,187 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:18:16,188 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_area (user_id, region_id, type ) values (?, ?, ? ) 
+2018-07-30 14:18:16,189 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 406bb699ac064df282f2aadfd02ac4e8(String), 520100(String), 2(Short)
+2018-07-30 14:18:16,193 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:18:41,306 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10424 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:18:41,314 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:18:41,321 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:18:48,794 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 8.492 seconds (JVM running for 10.569)
+2018-07-30 14:19:03,934 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@40513697
+2018-07-30 14:19:03,934 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_92d4eb57532e4dcaa668d4b113405c0f
+2018-07-30 14:19:03,934 INFO (RedisTokenManager.java:37)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=92d4eb57532e4dcaa668d4b113405c0f)
+2018-07-30 14:19:04,209 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 14:19:04,965 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 14:19:05,195 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: jzzv(String)
+2018-07-30 14:19:05,472 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 14:19:05,477 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_info (id, name, telephone, pwd, account, email, update_time, create_time, update_user, create_user, is_del, job, work_unit, age) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2018-07-30 14:19:05,486 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 8386b3b52e2444428b34b3bae54d291a(String), jzzv(String), null, E10ADC3949BA59ABBE56E057F20F883E(String), null, null, null, null, null, null, 0(Short), null, 慧云网安(String), 18(Integer)
+2018-07-30 14:19:05,488 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:19:05,489 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_area (user_id, region_id, type ) values (?, ?, ? ) 
+2018-07-30 14:19:05,490 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 8386b3b52e2444428b34b3bae54d291a(String), 520100(String), 2(Short)
+2018-07-30 14:19:05,492 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:19:34,313 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 9088 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:19:34,314 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:19:34,319 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:19:41,498 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 8.067 seconds (JVM running for 10.047)
+2018-07-30 14:29:32,420 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 9088 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:29:32,421 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:29:32,421 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:29:53,516 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 21.289 seconds (JVM running for 622.045)
+2018-07-30 14:30:06,245 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@6b005810
+2018-07-30 14:30:06,246 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_92d4eb57532e4dcaa668d4b113405c0f
+2018-07-30 14:30:06,247 INFO (RedisTokenManager.java:37)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=92d4eb57532e4dcaa668d4b113405c0f)
+2018-07-30 14:30:06,722 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 14:30:25,437 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10868 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:30:25,439 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:30:25,440 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:30:35,892 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 11.377 seconds (JVM running for 14.36)
+2018-07-30 14:30:46,745 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@2313e182
+2018-07-30 14:30:46,745 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_92d4eb57532e4dcaa668d4b113405c0f
+2018-07-30 14:30:46,746 INFO (RedisTokenManager.java:37)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=92d4eb57532e4dcaa668d4b113405c0f)
+2018-07-30 14:30:47,192 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 14:30:48,063 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 14:30:48,211 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: jzzv(String)
+2018-07-30 14:30:48,232 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 14:30:48,237 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_info (id, name, telephone, pwd, account, email, update_time, create_time, update_user, create_user, is_del, job, work_unit, age) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2018-07-30 14:30:48,251 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 08528ca2b649448ab1347872aea4ee55(String), jzzv(String), null, E10ADC3949BA59ABBE56E057F20F883E(String), null, null, null, null, null, null, 0(Short), null, 慧云网安(String), 18(Integer)
+2018-07-30 14:30:48,253 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:30:48,254 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_area (user_id, region_id, type ) values (?, ?, ? ) 
+2018-07-30 14:30:48,256 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 08528ca2b649448ab1347872aea4ee55(String), 520100(String), 2(Short)
+2018-07-30 14:30:48,315 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:31:06,280 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11656 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:31:06,282 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:31:06,285 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:31:15,448 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 10.131 seconds (JVM running for 12.406)
+2018-07-30 14:31:21,800 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@5d6cbc1
+2018-07-30 14:31:21,801 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_92d4eb57532e4dcaa668d4b113405c0f
+2018-07-30 14:31:21,802 INFO (RedisTokenManager.java:37)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=92d4eb57532e4dcaa668d4b113405c0f)
+2018-07-30 14:31:22,196 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 14:31:22,899 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 14:31:23,080 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: jzzv(String)
+2018-07-30 14:31:23,373 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 14:31:23,402 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/add<:=====:>POST<:=====:>null<:=====:>用户名称已经存在
+2018-07-30 14:31:23,404 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 14:31:23,416 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: fafc405589b44884b8e4c0f74ecbbe59(String), 临时用户(String), 192.168.1.81(String), /user/add(String), 192.168.1.81(String), 13743(Integer), 1006(Short), 用户名称已经存在(String), 2018-07-30 14:31:23.402(Timestamp), 用户名称已经存在(String), null
+2018-07-30 14:31:23,446 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:31:39,475 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@5d6cbc1
+2018-07-30 14:31:39,475 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_92d4eb57532e4dcaa668d4b113405c0f
+2018-07-30 14:31:39,475 INFO (RedisTokenManager.java:37)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=92d4eb57532e4dcaa668d4b113405c0f)
+2018-07-30 14:31:39,477 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 14:31:39,481 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 14:31:39,481 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: jzzv(String)
+2018-07-30 14:31:39,483 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 14:31:39,484 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_info (id, name, telephone, pwd, account, email, update_time, create_time, update_user, create_user, is_del, job, work_unit, age) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2018-07-30 14:31:39,485 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 29b7a9a2aa264894825a58aef815df50(String), jzzv(String), null, E10ADC3949BA59ABBE56E057F20F883E(String), null, null, null, null, null, null, 0(Short), null, 慧云网安(String), 18(Integer)
+2018-07-30 14:31:39,489 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:31:39,490 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_area (user_id, region_id, type ) values (?, ?, ? ) 
+2018-07-30 14:31:39,490 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 29b7a9a2aa264894825a58aef815df50(String), 520100(String), 2(Short)
+2018-07-30 14:31:39,496 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:36:40,917 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11656 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:36:40,918 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:36:40,918 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:37:08,798 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 27.948 seconds (JVM running for 365.739)
+2018-07-30 14:39:22,243 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11656 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:39:22,245 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:39:22,245 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:39:58,532 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 36.672 seconds (JVM running for 535.473)
+2018-07-30 14:40:14,099 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11656 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:40:14,100 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:40:14,101 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:40:44,720 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 31.277 seconds (JVM running for 581.658)
+2018-07-30 14:40:58,774 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11656 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:40:58,774 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:40:58,774 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:41:04,755 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 6.093 seconds (JVM running for 601.694)
+2018-07-30 14:41:28,818 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11656 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:41:28,819 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:41:28,819 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:42:29,758 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11656 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:42:29,759 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:42:29,759 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:42:32,982 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.292 seconds (JVM running for 689.918)
+2018-07-30 14:42:39,629 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11656 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:42:39,629 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:42:39,629 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:42:43,121 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.611 seconds (JVM running for 700.057)
+2018-07-30 14:42:45,831 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11656 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:42:45,832 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:42:45,832 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:42:56,322 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11656 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:42:56,322 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:42:56,322 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:42:59,449 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.18 seconds (JVM running for 716.385)
+2018-07-30 14:43:05,733 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11656 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:43:05,733 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:43:05,733 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:43:22,226 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11656 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:43:22,227 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:43:22,227 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:43:29,424 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 7.24 seconds (JVM running for 746.358)
+2018-07-30 14:43:56,693 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10452 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:43:56,694 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:43:56,696 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:44:05,008 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 9.346 seconds (JVM running for 11.923)
+2018-07-30 14:44:12,147 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@41725b09
+2018-07-30 14:44:12,148 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_92d4eb57532e4dcaa668d4b113405c0f
+2018-07-30 14:44:12,148 INFO (RedisTokenManager.java:37)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=92d4eb57532e4dcaa668d4b113405c0f)
+2018-07-30 14:44:12,470 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 14:44:13,227 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 14:44:13,370 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: jzzv(String)
+2018-07-30 14:44:13,639 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 14:44:56,131 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_role (user_id, role_id) values (?, ?) 
+2018-07-30 14:44:56,143 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: null, 1(String)
+2018-07-30 14:44:56,221 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/add<:=====:>POST<:=====:>null<:=====:>
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'user_id' cannot be null
+### The error may involve com.hywa.pricepublish.dao.mapper.UserRoleMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into user_ref_role (user_id, role_id)     values (?, ?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'user_id' cannot be null
+; ]; Column 'user_id' cannot be null; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'user_id' cannot be null
+2018-07-30 14:44:56,223 ERROR (GlobalDefaultExceptionHandler.java:85)- class org.springframework.dao.DataIntegrityViolationException:
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'user_id' cannot be null
+### The error may involve com.hywa.pricepublish.dao.mapper.UserRoleMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into user_ref_role (user_id, role_id)     values (?, ?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'user_id' cannot be null
+; ]; Column 'user_id' cannot be null; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'user_id' cannot be null
+2018-07-30 14:44:56,224 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 14:44:56,228 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 00d08066df324bd487f3b6e1a124b84f(String), 临时用户(String), 192.168.1.81(String), /user/add(String), 192.168.1.81(String), 1682(Integer), null, null, 2018-07-30 14:44:56.221(Timestamp), ### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'user_id' cannot be null
+### The error may involve com.hywa.pricepublish.dao.mapper.UserRoleMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into user_ref_role (user_id, role_id)     values (?, ?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'user_id' cannot be null
+; ]; Column 'user_id' cannot be null; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'user_id' cannot be null(String), null
+2018-07-30 14:44:56,242 ERROR (GlobalDefaultExceptionHandler.java:94)- 
+### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'real_error_message' at row 1
+### The error may involve com.hywa.pricepublish.dao.mapper.LogMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into log (id, userId, req_ip,        req_uri, req_host, req_port,        error_code, error_message, create_time,        real_error_message, parameter)     values (?, ?, ?,        ?, ?, ?,        ?, ?, ?,        ?, ?)
+### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'real_error_message' at row 1
+; ]; Data truncation: Data too long for column 'real_error_message' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'real_error_message' at row 1
+2018-07-30 14:45:49,286 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@41725b09
+2018-07-30 14:45:49,286 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_92d4eb57532e4dcaa668d4b113405c0f
+2018-07-30 14:45:49,286 INFO (RedisTokenManager.java:37)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=92d4eb57532e4dcaa668d4b113405c0f)
+2018-07-30 14:45:49,288 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 14:45:49,293 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 14:45:49,294 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: jzzv(String)
+2018-07-30 14:45:49,296 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 14:46:03,592 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_role (user_id, role_id) values (?, ?) 
+2018-07-30 14:46:03,594 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: null, 1(String)
+2018-07-30 14:46:03,615 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/add<:=====:>POST<:=====:>null<:=====:>
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'user_id' cannot be null
+### The error may involve com.hywa.pricepublish.dao.mapper.UserRoleMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into user_ref_role (user_id, role_id)     values (?, ?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'user_id' cannot be null
+; ]; Column 'user_id' cannot be null; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'user_id' cannot be null
+2018-07-30 14:46:03,615 ERROR (GlobalDefaultExceptionHandler.java:85)- class org.springframework.dao.DataIntegrityViolationException:
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'user_id' cannot be null
+### The error may involve com.hywa.pricepublish.dao.mapper.UserRoleMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into user_ref_role (user_id, role_id)     values (?, ?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'user_id' cannot be null
+; ]; Column 'user_id' cannot be null; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'user_id' cannot be null
+2018-07-30 14:46:03,616 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 14:46:03,621 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 980e4b3eb1f14daea5247ca2f39bdb29(String), 临时用户(String), 192.168.1.81(String), /user/add(String), 192.168.1.81(String), 1682(Integer), null, null, 2018-07-30 14:46:03.615(Timestamp), ### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'user_id' cannot be null
+### The error may involve com.hywa.pricepublish.dao.mapper.UserRoleMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into user_ref_role (user_id, role_id)     values (?, ?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'user_id' cannot be null
+; ]; Column 'user_id' cannot be null; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'user_id' cannot be null(String), null
+2018-07-30 14:46:03,627 ERROR (GlobalDefaultExceptionHandler.java:94)- 
+### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'real_error_message' at row 1
+### The error may involve com.hywa.pricepublish.dao.mapper.LogMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into log (id, userId, req_ip,        req_uri, req_host, req_port,        error_code, error_message, create_time,        real_error_message, parameter)     values (?, ?, ?,        ?, ?, ?,        ?, ?, ?,        ?, ?)
+### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'real_error_message' at row 1
+; ]; Data truncation: Data too long for column 'real_error_message' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'real_error_message' at row 1
+2018-07-30 14:46:38,189 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10452 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:46:38,189 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:46:38,189 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:46:44,581 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11784 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:46:44,583 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:46:44,585 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:46:53,717 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 10.784 seconds (JVM running for 12.843)
+2018-07-30 14:47:02,081 INFO (TokenAuthorFilter.java:69)- com.hywa.pricepublish.config.interceptor.RedisTokenManager@4b9306ca
+2018-07-30 14:47:02,082 INFO (TokenAuthorFilter.java:70)- b8d11ee289394be688ef3a4f6968efed_92d4eb57532e4dcaa668d4b113405c0f
+2018-07-30 14:47:02,082 INFO (RedisTokenManager.java:37)- tokenModel : TokenModel(userId=b8d11ee289394be688ef3a4f6968efed, token=92d4eb57532e4dcaa668d4b113405c0f)
+2018-07-30 14:47:03,034 INFO (TokenAuthorFilter.java:109)- token filter过滤ok!
+2018-07-30 14:47:03,673 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select count(*) from user_info WHERE ( name = ? ) 
+2018-07-30 14:47:03,874 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: jzzv(String)
+2018-07-30 14:47:04,099 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-07-30 14:47:04,107 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_role (user_id, role_id) values (?, ?) 
+2018-07-30 14:47:04,113 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: c263f117585146d78c51581d64e25ad4(String), 1(String)
+2018-07-30 14:47:04,117 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:47:04,118 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_info (id, name, telephone, pwd, account, email, update_time, create_time, update_user, create_user, is_del, job, work_unit, age) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2018-07-30 14:47:04,121 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: c263f117585146d78c51581d64e25ad4(String), jzzv(String), null, E10ADC3949BA59ABBE56E057F20F883E(String), null, null, null, null, null, null, 0(Short), null, 慧云网安(String), 18(Integer)
+2018-07-30 14:47:04,123 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:47:04,124 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_area (user_id, region_id, type ) values (?, ?, ? ) 
+2018-07-30 14:47:04,125 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: c263f117585146d78c51581d64e25ad4(String), 520100(String), 2(Short)
+2018-07-30 14:47:04,127 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 14:50:40,651 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11784 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:50:40,658 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:50:40,658 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:50:54,502 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 14.229 seconds (JVM running for 253.618)
+2018-07-30 14:59:35,474 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11784 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 14:59:35,476 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 14:59:35,492 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 14:59:49,785 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 15.431 seconds (JVM running for 788.885)
+2018-07-30 15:00:34,711 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11784 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:00:34,712 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:00:34,712 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:01:01,033 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11784 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:01:01,033 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:01:01,033 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:01:05,762 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 4.802 seconds (JVM running for 864.86)
+2018-07-30 15:02:56,754 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11784 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:02:56,755 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:02:56,756 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:03:41,119 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11784 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:03:41,120 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:03:41,121 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:03:46,930 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 5.901 seconds (JVM running for 1026.023)
+2018-07-30 15:03:50,962 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11784 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:03:50,962 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:03:50,962 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:03:52,779 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 1.862 seconds (JVM running for 1031.872)
+2018-07-30 15:04:43,773 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11784 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:04:43,775 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:04:43,775 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:05:02,253 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11784 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:05:02,254 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:05:02,254 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:05:12,170 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 10.065 seconds (JVM running for 1111.26)
+2018-07-30 15:06:17,281 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11784 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:06:17,282 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:06:17,283 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:06:27,115 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 10.085 seconds (JVM running for 1186.203)
+2018-07-30 15:08:33,321 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11784 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:08:33,322 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:08:33,322 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:08:37,491 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 4.319 seconds (JVM running for 1316.575)
+2018-07-30 15:08:44,874 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11784 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:08:44,875 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:08:44,875 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:08:51,029 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 6.209 seconds (JVM running for 1330.112)
+2018-07-30 15:11:50,563 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: delete from user_ref_role where user_id = ? 
+2018-07-30 15:11:50,834 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: c263f117585146d78c51581d64e25ad4(String)
+2018-07-30 15:11:50,849 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 15:11:51,050 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/updateRole<:=====:>PUT<:=====:>userId=c263f117585146d78c51581d64e25ad4<:=====:>null
+2018-07-30 15:11:51,058 ERROR (GlobalDefaultExceptionHandler.java:85)- class java.lang.NullPointerException:null
+2018-07-30 15:11:51,066 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 15:11:51,104 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2da657265d76412a87cc1fa14ae5a25e(String), 临时用户(String), 192.168.1.81(String), /user/updateRole(String), 192.168.1.81(String), 5391(Integer), null, null, 2018-07-30 15:11:51.034(Timestamp), null, userId=c263f117585146d78c51581d64e25ad4(String)
+2018-07-30 15:11:51,135 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 15:13:08,869 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: delete from user_ref_role where user_id = ? 
+2018-07-30 15:13:08,888 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: c263f117585146d78c51581d64e25ad4(String)
+2018-07-30 15:13:08,898 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 15:13:08,933 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/updateRole<:=====:>PUT<:=====:>userId=c263f117585146d78c51581d64e25ad4<:=====:>null
+2018-07-30 15:13:08,934 ERROR (GlobalDefaultExceptionHandler.java:85)- class java.lang.NullPointerException:null
+2018-07-30 15:13:08,934 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 15:13:08,936 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 21418091290c425da1ed54a591587a77(String), 临时用户(String), 192.168.1.81(String), /user/updateRole(String), 192.168.1.81(String), 5529(Integer), null, null, 2018-07-30 15:13:08.933(Timestamp), null, userId=c263f117585146d78c51581d64e25ad4(String)
+2018-07-30 15:13:08,964 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 15:14:02,547 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11784 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:14:02,548 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:14:02,549 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:14:15,660 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 13.25 seconds (JVM running for 1654.732)
+2018-07-30 15:14:26,136 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: delete from user_ref_role where user_id = ? 
+2018-07-30 15:14:26,163 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/updateRole<:=====:>PUT<:=====:>userId=c263f117585146d78c51581d64e25ad4<:=====:>nested exception is org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [user, param1]
+2018-07-30 15:14:26,164 ERROR (GlobalDefaultExceptionHandler.java:85)- class org.mybatis.spring.MyBatisSystemException:nested exception is org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [user, param1]
+2018-07-30 15:14:26,166 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 15:14:26,171 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 4be743c1d8f4411da458a1296463d63a(String), 临时用户(String), 192.168.1.81(String), /user/updateRole(String), 192.168.1.81(String), 5684(Integer), null, null, 2018-07-30 15:14:26.162(Timestamp), nested exception is org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [user, param1](String), userId=c263f117585146d78c51581d64e25ad4(String)
+2018-07-30 15:14:26,202 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 15:16:23,686 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: delete from user_ref_role where user_id = ? 
+2018-07-30 15:16:24,049 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/updateRole<:=====:>PUT<:=====:>userId=c263f117585146d78c51581d64e25ad4<:=====:>nested exception is org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [user, param1]
+2018-07-30 15:16:24,060 ERROR (GlobalDefaultExceptionHandler.java:85)- class org.mybatis.spring.MyBatisSystemException:nested exception is org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [user, param1]
+2018-07-30 15:16:24,065 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 15:16:24,115 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 740938e7363c498f890e01c4faf9f1d6(String), 临时用户(String), 192.168.1.81(String), /user/updateRole(String), 192.168.1.81(String), 5878(Integer), null, null, 2018-07-30 15:16:24.047(Timestamp), nested exception is org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [user, param1](String), userId=c263f117585146d78c51581d64e25ad4(String)
+2018-07-30 15:16:24,206 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 15:16:45,803 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 7268 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:16:45,805 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:16:45,807 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:16:54,443 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 9.792 seconds (JVM running for 12.878)
+2018-07-30 15:17:51,027 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 7268 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:17:51,027 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:17:51,028 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:17:57,764 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 7268 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:17:57,764 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:17:57,765 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:18:01,478 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.779 seconds (JVM running for 79.911)
+2018-07-30 15:19:05,121 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 7268 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:19:05,126 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:19:05,133 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:19:11,239 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 6.42 seconds (JVM running for 149.669)
+2018-07-30 15:19:24,212 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 7268 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:19:24,213 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:19:24,213 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:19:32,795 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 7268 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:19:32,796 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:19:32,796 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:19:36,046 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.33 seconds (JVM running for 174.476)
+2018-07-30 15:19:54,305 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: delete from user_ref_role where user_id = ? 
+2018-07-30 15:19:54,501 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: c263f117585146d78c51581d64e25ad4(String)
+2018-07-30 15:19:54,509 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 15:19:54,619 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/updateRole<:=====:>PUT<:=====:>userId=c263f117585146d78c51581d64e25ad4<:=====:>null
+2018-07-30 15:19:54,621 ERROR (GlobalDefaultExceptionHandler.java:85)- class java.lang.NullPointerException:null
+2018-07-30 15:19:54,636 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 15:19:54,666 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 76ef2a8f438d41198b113f79abf5664d(String), 临时用户(String), 192.168.1.81(String), /user/updateRole(String), 192.168.1.81(String), 6322(Integer), null, null, 2018-07-30 15:19:54.618(Timestamp), null, userId=c263f117585146d78c51581d64e25ad4(String)
+2018-07-30 15:19:54,696 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 15:21:43,817 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: delete from user_ref_role where user_id = ? 
+2018-07-30 15:21:43,892 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: c263f117585146d78c51581d64e25ad4(String)
+2018-07-30 15:21:43,914 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 15:22:11,134 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/updateRole<:=====:>PUT<:=====:>userId=c263f117585146d78c51581d64e25ad4<:=====:>null
+2018-07-30 15:22:11,140 ERROR (GlobalDefaultExceptionHandler.java:85)- class java.lang.NullPointerException:null
+2018-07-30 15:22:11,144 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 15:22:11,161 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 9f73b2d36647458792bfb2b62f2c2db9(String), 临时用户(String), 192.168.1.81(String), /user/updateRole(String), 192.168.1.81(String), 6519(Integer), null, null, 2018-07-30 15:22:11.131(Timestamp), null, userId=c263f117585146d78c51581d64e25ad4(String)
+2018-07-30 15:22:11,189 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 15:22:24,551 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 12524 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:22:24,555 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:22:24,558 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:22:33,525 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 10.039 seconds (JVM running for 14.996)
+2018-07-30 15:23:29,966 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 1276 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:23:29,970 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:23:29,973 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:23:38,102 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 9.43 seconds (JVM running for 12.055)
+2018-07-30 15:24:06,617 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 1276 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:24:06,618 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:24:06,618 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:24:11,895 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 5.311 seconds (JVM running for 45.846)
+2018-07-30 15:24:35,024 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 1276 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:24:35,026 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:24:35,026 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:24:38,116 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.344 seconds (JVM running for 72.067)
+2018-07-30 15:25:12,457 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11304 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:25:12,575 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:25:12,580 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:25:19,853 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 8.729 seconds (JVM running for 11.148)
+2018-07-30 15:25:35,220 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11304 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:25:35,220 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:25:35,220 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:26:28,491 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11304 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:26:28,493 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:26:28,493 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:26:34,718 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11304 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:26:34,719 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:26:34,719 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:26:38,028 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.361 seconds (JVM running for 89.321)
+2018-07-30 15:27:45,754 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11020 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:27:45,756 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:27:45,764 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:27:53,267 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 8.935 seconds (JVM running for 11.624)
+2018-07-30 15:29:19,498 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10604 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:29:19,500 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:29:19,502 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:29:25,690 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 7.597 seconds (JVM running for 10.068)
+2018-07-30 15:29:57,023 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10604 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:29:57,026 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:29:57,026 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:30:01,181 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 4.218 seconds (JVM running for 45.558)
+2018-07-30 15:30:09,548 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10604 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:30:09,548 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:30:09,548 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:30:25,569 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 12888 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:30:25,572 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:30:25,574 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:30:33,490 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 8.606 seconds (JVM running for 11.366)
+2018-07-30 15:31:05,824 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: delete from user_ref_role where user_id = ? 
+2018-07-30 15:31:06,035 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: c263f117585146d78c51581d64e25ad4(String)
+2018-07-30 15:31:06,044 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 15:31:06,073 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_role (user_id, role_id) values (?, ?) 
+2018-07-30 15:31:06,151 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/updateRole<:=====:>PUT<:=====:>userId=c263f117585146d78c51581d64e25ad4<:=====:>nested exception is org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [collection, list]
+2018-07-30 15:31:06,154 ERROR (GlobalDefaultExceptionHandler.java:85)- class org.mybatis.spring.MyBatisSystemException:nested exception is org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [collection, list]
+2018-07-30 15:31:06,158 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 15:31:06,168 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: d66bd3f52f8946d8863a99aad07fe7dc(String), 临时用户(String), 192.168.1.81(String), /user/updateRole(String), 192.168.1.81(String), 7737(Integer), null, null, 2018-07-30 15:31:06.15(Timestamp), nested exception is org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [collection, list](String), userId=c263f117585146d78c51581d64e25ad4(String)
+2018-07-30 15:31:06,199 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 15:31:29,090 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: delete from user_ref_role where user_id = ? 
+2018-07-30 15:31:29,092 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: c263f117585146d78c51581d64e25ad4(String)
+2018-07-30 15:31:29,096 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 15:32:47,034 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_role (user_id, role_id) values (?, ?) 
+2018-07-30 15:32:47,151 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/user/updateRole<:=====:>PUT<:=====:>userId=c263f117585146d78c51581d64e25ad4<:=====:>nested exception is org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [collection, list]
+2018-07-30 15:32:47,153 ERROR (GlobalDefaultExceptionHandler.java:85)- class org.mybatis.spring.MyBatisSystemException:nested exception is org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [collection, list]
+2018-07-30 15:32:47,154 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 15:32:47,171 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 9069b8a8855848dc835069d13f5f711b(String), 临时用户(String), 192.168.1.81(String), /user/updateRole(String), 192.168.1.81(String), 7737(Integer), null, null, 2018-07-30 15:32:47.146(Timestamp), nested exception is org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [collection, list](String), userId=c263f117585146d78c51581d64e25ad4(String)
+2018-07-30 15:32:47,192 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 15:35:13,188 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 12900 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:35:13,193 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:35:13,195 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:35:30,932 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 18.819 seconds (JVM running for 21.356)
+2018-07-30 15:35:39,137 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: delete from user_ref_role where user_id = ? 
+2018-07-30 15:35:39,282 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: c263f117585146d78c51581d64e25ad4(String)
+2018-07-30 15:35:39,289 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 15:35:39,318 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_role (user_id, role_id) values (?, ?) 
+2018-07-30 15:35:39,323 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: c263f117585146d78c51581d64e25ad4(String), 1(String)
+2018-07-30 15:35:39,326 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 15:36:22,904 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 12900 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:36:22,905 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:36:22,906 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:36:28,574 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 5.783 seconds (JVM running for 78.997)
+2018-07-30 15:38:50,248 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: delete from user_ref_role where user_id = ? 
+2018-07-30 15:38:50,277 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: (String)
+2018-07-30 15:38:50,287 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 0
+2018-07-30 15:38:50,298 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_role (user_id, role_id) values /*映射关系写错了*/ (?, ?) 
+2018-07-30 15:38:50,320 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: (String), 1(String)
+2018-07-30 15:38:50,322 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 15:40:31,847 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: delete from user_ref_role where user_id = ? 
+2018-07-30 15:40:31,905 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: (String)
+2018-07-30 15:40:31,925 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 15:40:31,937 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into user_ref_role (user_id, role_id) values /*映射关系写错了*/ (?, ?) 
+2018-07-30 15:40:31,939 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: (String), 1(String)
+2018-07-30 15:40:32,048 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 15:40:37,092 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 12884 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:40:37,097 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:40:37,103 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:40:49,234 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 13.257 seconds (JVM running for 15.826)
+2018-07-30 15:43:52,311 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 12884 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:43:52,312 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:43:52,326 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:44:09,905 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 17.737 seconds (JVM running for 216.491)
+2018-07-30 15:46:25,511 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 12884 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:46:25,512 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:46:25,512 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:46:38,800 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 13.433 seconds (JVM running for 365.381)
+2018-07-30 15:46:45,878 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 12884 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:46:45,878 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:46:45,878 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:46:55,345 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 12884 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:46:55,346 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:46:55,353 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:47:02,903 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 12884 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:47:02,903 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:47:02,904 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:47:17,734 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 12884 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:47:17,735 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:47:17,735 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:47:33,741 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 12884 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:47:33,742 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:47:33,742 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:47:46,855 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 380 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:47:46,856 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:47:46,859 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:47:53,343 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 7.06 seconds (JVM running for 9.854)
+2018-07-30 15:50:02,728 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 380 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:50:02,731 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:50:02,736 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:50:08,591 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 380 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 15:50:08,627 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 15:50:08,629 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 15:50:20,363 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 12.09 seconds (JVM running for 156.869)
+2018-07-30 16:06:48,290 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/menu/userMenuTree<:=====:>GET<:=====:>userId=c263f117585146d78c51581d64e25ad4&requsetMode=0<:=====:>Required String parameter 'requestMode' is not present
+2018-07-30 16:06:48,300 ERROR (GlobalDefaultExceptionHandler.java:85)- class org.springframework.web.bind.MissingServletRequestParameterException:Required String parameter 'requestMode' is not present
+2018-07-30 16:06:48,977 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 16:06:49,147 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 8cc8fb842dac49f895c4b290976d2745(String), 临时用户(String), 192.168.1.81(String), /menu/userMenuTree(String), 192.168.1.81(String), 12406(Integer), null, null, 2018-07-30 16:06:48.287(Timestamp), Required String parameter 'requestMode' is not present(String), userId=c263f117585146d78c51581d64e25ad4&requsetMode=0(String)
+2018-07-30 16:06:49,183 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 16:07:39,578 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/menu/userMenuTree<:=====:>GET<:=====:>userId=c263f117585146d78c51581d64e25ad4&requsetMode=0<:=====:>Required String parameter 'requestMode' is not present
+2018-07-30 16:07:39,578 ERROR (GlobalDefaultExceptionHandler.java:85)- class org.springframework.web.bind.MissingServletRequestParameterException:Required String parameter 'requestMode' is not present
+2018-07-30 16:07:39,583 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 16:07:39,584 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 56ccbc0b4db746b5aab96511dd1a5c42(String), 临时用户(String), 192.168.1.81(String), /menu/userMenuTree(String), 192.168.1.81(String), 12406(Integer), null, null, 2018-07-30 16:07:39.577(Timestamp), Required String parameter 'requestMode' is not present(String), userId=c263f117585146d78c51581d64e25ad4&requsetMode=0(String)
+2018-07-30 16:07:39,630 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 16:07:46,165 ERROR (GlobalDefaultExceptionHandler.java:58)- http://192.168.1.81:8080/menu/userMenuTree<:=====:>GET<:=====:>userId=c263f117585146d78c51581d64e25ad4&requsetMode=0<:=====:>Required String parameter 'requestMode' is not present
+2018-07-30 16:07:46,165 ERROR (GlobalDefaultExceptionHandler.java:85)- class org.springframework.web.bind.MissingServletRequestParameterException:Required String parameter 'requestMode' is not present
+2018-07-30 16:07:46,166 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-30 16:07:46,170 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 3c3a67c393584cd7a12a149c810cb2ef(String), 临时用户(String), 192.168.1.81(String), /menu/userMenuTree(String), 192.168.1.81(String), 12406(Integer), null, null, 2018-07-30 16:07:46.165(Timestamp), Required String parameter 'requestMode' is not present(String), userId=c263f117585146d78c51581d64e25ad4&requsetMode=0(String)
+2018-07-30 16:07:46,196 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-07-30 16:08:47,006 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select menu_info.* from ( select distinct menu_info.id from user_ref_role left join role_ref_menu on role_ref_menu.role_id=user_ref_role.role_id left join menu_info on role_ref_menu.menu_id=menu_info.id where user_ref_role.user_id= ?) temMenu left join menu_info on temMenu.id=menu_info.id 
+2018-07-30 16:08:48,943 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: c263f117585146d78c51581d64e25ad4(String)
+2018-07-30 16:08:49,287 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 75
+2018-07-30 16:13:40,301 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 380 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 16:13:40,301 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 16:13:40,302 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 16:15:33,409 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 380 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 16:15:33,410 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 16:15:33,411 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 16:15:41,540 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 380 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 16:15:41,540 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 16:15:41,541 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 16:17:02,874 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 380 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 16:17:02,885 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 16:17:02,886 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 16:18:01,845 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 380 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 16:18:01,847 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 16:18:01,848 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 16:18:24,965 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 380 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 16:18:24,966 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 16:18:24,967 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 16:18:40,328 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 380 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 16:18:40,331 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 16:18:40,331 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 16:18:54,557 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 9040 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 16:18:54,559 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 16:18:54,562 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 16:19:02,733 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 9.216 seconds (JVM running for 11.722)
+2018-07-30 16:20:00,094 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 9040 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 16:20:00,094 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 16:20:00,095 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 16:20:03,763 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.714 seconds (JVM running for 72.75)
+2018-07-30 16:20:15,854 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 9040 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 16:20:15,855 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 16:20:15,855 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 16:20:24,336 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 8.544 seconds (JVM running for 93.322)
+2018-07-30 16:21:19,513 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 9040 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 16:21:19,514 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 16:21:19,514 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 16:21:27,242 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 7.85 seconds (JVM running for 156.226)
+2018-07-30 16:21:31,397 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 9040 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 16:21:31,398 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 16:21:31,398 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 16:21:37,080 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 5.724 seconds (JVM running for 166.063)
+2018-07-30 16:21:42,272 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 9040 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 16:21:42,272 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 16:21:42,272 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 16:21:46,782 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 4.547 seconds (JVM running for 175.765)
+2018-07-30 16:21:48,857 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 9040 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 16:21:48,858 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 16:21:48,858 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 16:21:51,577 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 2.77 seconds (JVM running for 180.559)
+2018-07-30 16:21:53,677 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 9040 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 16:21:53,677 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 16:21:53,677 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 16:21:58,516 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 4.885 seconds (JVM running for 187.499)
+2018-07-30 16:29:17,203 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 9040 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 16:29:17,205 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 16:29:17,205 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 16:30:09,124 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 52.93 seconds (JVM running for 678.091)
+2018-07-30 16:31:32,289 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 9040 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 16:31:32,291 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 16:31:32,292 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 16:36:40,989 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 9040 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 16:36:40,998 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 16:36:41,029 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 17:02:24,012 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 9040 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 17:02:24,021 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 17:02:24,023 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 17:03:03,688 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 9040 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-07-30 17:03:03,692 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-07-30 17:03:03,693 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-07-30 17:03:05,649 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 2.019 seconds (JVM running for 2654.552)

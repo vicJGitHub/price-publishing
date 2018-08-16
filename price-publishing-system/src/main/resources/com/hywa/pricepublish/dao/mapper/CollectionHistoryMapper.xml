@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hywa.pricepublish.dao.mapper.CollectionHistoryMapper">
+  <resultMap id="BaseResultMap" type="com.hywa.pricepublish.dao.entity.CollectionHistory">
+    <id column="id" property="id" jdbcType="CHAR"/>
+    <result column="price_collect_id" property="priceCollectId" jdbcType="CHAR"/>
+    <result column="market_name" property="marketName" jdbcType="VARCHAR"/>
+    <result column="collection_time" property="collectionTime" jdbcType="TIMESTAMP"/>
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+    <result column="is_del" property="isDel" jdbcType="SMALLINT"/>
+    <result column="user_id" property="userId" jdbcType="CHAR"/>
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                    separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                    separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, price_collect_id, market_name, collection_time, is_del, user_id, create_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap"
+    parameterType="com.hywa.pricepublish.dao.entity.CollectionHistoryExample">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List"/>
+    from collection_history
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause"/>
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select
+    <include refid="Base_Column_List"/>
+    from collection_history
+    where id = #{id,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from collection_history
+    where id = #{id,jdbcType=CHAR}
+  </delete>
+  <delete id="deleteByExample"
+    parameterType="com.hywa.pricepublish.dao.entity.CollectionHistoryExample">
+    delete from collection_history
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause"/>
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.hywa.pricepublish.dao.entity.CollectionHistory">
+    insert into collection_history (id, market_name,
+      collection_time, is_del, user_id, create_time
+      )
+    values (#{id,jdbcType=CHAR},#{marketName,jdbcType=VARCHAR},
+      #{collectionTime,jdbcType=TIMESTAMP}, #{isDel,jdbcType=SMALLINT}, #{userId,jdbcType=CHAR},
+       #{createTime,jdbcType=CHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.hywa.pricepublish.dao.entity.CollectionHistory">
+    insert into collection_history
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="collectHistoryId != null">
+        price_collect_id,
+      </if>
+      <if test="marketName != null">
+        market_name,
+      </if>
+      <if test="collectionTime != null">
+        collection_time,
+      </if>
+      <if test="isDel != null">
+        is_del,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=CHAR},
+      </if>
+      <if test="collectHistoryId != null">
+        #{collectHistoryId,jdbcType=CHAR},
+      </if>
+      <if test="marketName != null">
+        #{marketName,jdbcType=VARCHAR},
+      </if>
+      <if test="collectionTime != null">
+        #{collectionTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isDel != null">
+        #{isDel,jdbcType=SMALLINT},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample"
+    parameterType="com.hywa.pricepublish.dao.entity.CollectionHistoryExample"
+    resultType="java.lang.Integer">
+    select count(*) from collection_history
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause"/>
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update collection_history
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=CHAR},
+      </if>
+      <if test="record.collectHistoryId != null">
+        price_collect_id = #{record.collectHistoryId,jdbcType=CHAR},
+      </if>
+      <if test="record.marketName != null">
+        market_name = #{record.marketName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.collectionTime != null">
+        collection_time = #{record.collectionTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.isDel != null">
+        is_del = #{record.isDel,jdbcType=SMALLINT},
+      </if>
+      <if test="record.userId != null">
+        user_id = #{record.userId,jdbcType=CHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause"/>
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update collection_history
+    set id = #{record.id,jdbcType=CHAR},
+    price_collect_id = #{record.collectHistoryId,jdbcType=CHAR},
+    market_name = #{record.marketName,jdbcType=VARCHAR},
+    collection_time = #{record.collectionTime,jdbcType=TIMESTAMP},
+    is_del = #{record.isDel,jdbcType=SMALLINT},
+    user_id = #{record.userId,jdbcType=CHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause"/>
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective"
+    parameterType="com.hywa.pricepublish.dao.entity.CollectionHistory">
+    update collection_history
+    <set>
+      <if test="collectHistoryId != null">
+        price_collect_id = #{collectHistoryId,jdbcType=CHAR},
+      </if>
+      <if test="marketName != null">
+        market_name = #{marketName,jdbcType=VARCHAR},
+      </if>
+      <if test="collectionTime != null">
+        collection_time = #{collectionTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isDel != null">
+        is_del = #{isDel,jdbcType=SMALLINT},
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=CHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey"
+    parameterType="com.hywa.pricepublish.dao.entity.CollectionHistory">
+    update collection_history
+    set price_collect_id = #{collectHistoryId,jdbcType=CHAR},
+      market_name = #{marketName,jdbcType=VARCHAR},
+      collection_time = #{collectionTime,jdbcType=TIMESTAMP},
+      is_del = #{isDel,jdbcType=SMALLINT},
+      user_id = #{userId,jdbcType=CHAR}
+    where id = #{id,jdbcType=CHAR}
+  </update>
+</mapper>

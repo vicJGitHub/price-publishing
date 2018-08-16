@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hywa.pricepublish.dao.mapper.DictMapper">
+  <resultMap id="BaseResultMap" type="com.hywa.pricepublish.dao.entity.Dict">
+    <id column="id" property="id" jdbcType="VARCHAR"/>
+    <result column="name" property="name" jdbcType="VARCHAR"/>
+    <result column="code" property="code" jdbcType="VARCHAR"/>
+    <result column="dict_type_id" property="dictTypeId" jdbcType="VARCHAR"/>
+    <result column="select_url" property="selectUrl" jdbcType="VARCHAR"/>
+    <result column="unselect_url" property="unSelectUrl" jdbcType="VARCHAR"/>
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                    separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                    separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, name, code, dictTypeId
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap"
+    parameterType="com.hywa.pricepublish.dao.entity.DictExample">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List"/>
+    from dict
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause"/>
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select
+    <include refid="Base_Column_List"/>
+    from dict
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update dict
+    set is_del = 1
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.hywa.pricepublish.dao.entity.DictExample">
+    delete from dict
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause"/>
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.hywa.pricepublish.dao.entity.Dict">
+    insert into dict (id, name, code, dict_type_id,is_del,select_url,unselect_url)
+    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, 
+      #{dictTypeId,jdbcType=VARCHAR},  #{isDel,jdbcType=VARCHAR}, #{selectUrl,jdbcType=VARCHAR},
+       #{unSelectUrl,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.hywa.pricepublish.dao.entity.Dict">
+    insert into dict
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="code != null">
+        code,
+      </if>
+      <if test="dictTypeId != null">
+        dictTypeId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="dictTypeId != null">
+        #{dictTypeId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.hywa.pricepublish.dao.entity.DictExample"
+    resultType="java.lang.Integer">
+    select count(*) from dict
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause"/>
+    </if>
+  </select>
+
+  <!--通过字典类型查询字典-->
+  <select id="selectByDictType" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select id,name,code,select_url,unselect_url
+        from dict
+        where dict_type_id = #{dictTypeId}
+        and is_del = 0
+    </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update dict
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name != null">
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.code != null">
+        code = #{record.code,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dictTypeId != null">
+        dictTypeId = #{record.dictTypeId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause"/>
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update dict
+    set id = #{record.id,jdbcType=VARCHAR},
+    name = #{record.name,jdbcType=VARCHAR},
+    code = #{record.code,jdbcType=VARCHAR},
+    dictTypeId = #{record.dictTypeId,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause"/>
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hywa.pricepublish.dao.entity.Dict">
+    update dict
+    <set>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null">
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="dictTypeId != null">
+        dictTypeId = #{dictTypeId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hywa.pricepublish.dao.entity.Dict">
+    update dict
+    set name = #{name,jdbcType=VARCHAR},
+      code = #{code,jdbcType=VARCHAR},
+      dict_type_id = #{dictTypeId,jdbcType=VARCHAR},
+      select_url = #{selectUrl,jdbcType=VARCHAR},
+      unselect_url = #{unSelectUrl,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

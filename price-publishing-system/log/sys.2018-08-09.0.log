@@ -1,0 +1,6 @@
+2018-08-09 08:45:01,128 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 8924 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-09 08:45:01,137 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-09 08:45:01,157 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-09 08:45:14,118 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 13.602 seconds (JVM running for 16.411)
+2018-08-09 08:45:22,012 INFO (TokenAuthorFilter.java:102)- token filter过滤ok!
+2018-08-09 08:46:52,536 INFO (TokenAuthorFilter.java:102)- token filter过滤ok!

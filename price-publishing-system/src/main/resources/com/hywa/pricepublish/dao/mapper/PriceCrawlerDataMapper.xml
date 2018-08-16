@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hywa.pricepublish.dao.mapper.PriceCrawlerDataMapper">
+  <resultMap id="BaseResultMap" type="com.hywa.pricepublish.dao.entity.PriceCrawlerData">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="price" jdbcType="VARCHAR" property="price" />
+    <result column="price_unit" jdbcType="VARCHAR" property="priceUnit" />
+    <result column="market" jdbcType="VARCHAR" property="market" />
+    <result column="region" jdbcType="VARCHAR" property="region" />
+    <result column="update_time" jdbcType="VARCHAR" property="updateTime" />
+    <result column="specification" jdbcType="VARCHAR" property="specification" />
+    <result column="data_origion" jdbcType="VARCHAR" property="dataOrigion" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, name, price, price_unit, market, region, update_time, specification, data_origion
+  </sql>
+  <select id="selectByExample" parameterType="com.hywa.pricepublish.dao.entity.PriceCrawlerDataExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_prices
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_prices
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from t_prices
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.hywa.pricepublish.dao.entity.PriceCrawlerDataExample">
+    delete from t_prices
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.hywa.pricepublish.dao.entity.PriceCrawlerData">
+    insert into t_prices (id, name, price, 
+      price_unit, market, region,
+      update_time, specification, data_origion
+      )
+    values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{price,jdbcType=VARCHAR}, 
+      #{priceUnit,jdbcType=VARCHAR}, #{market,jdbcType=VARCHAR}, #{region,jdbcType=VARCHAR},
+      #{updateTime,jdbcType=VARCHAR}, #{specification,jdbcType=VARCHAR}, #{dataOrigion,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.hywa.pricepublish.dao.entity.PriceCrawlerData">
+    insert into t_prices
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+      <if test="priceUnit != null">
+        price_unit,
+      </if>
+      <if test="market != null">
+        market,
+      </if>
+      <if test="region != null">
+        region,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="specification != null">
+        specification,
+      </if>
+      <if test="dataOrigion != null">
+        data_origion,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="priceUnit != null">
+        #{priceUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="market != null">
+        #{market,jdbcType=VARCHAR},
+      </if>
+      <if test="region != null">
+        #{region,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="specification != null">
+        #{specification,jdbcType=VARCHAR},
+      </if>
+      <if test="dataOrigion != null">
+        #{dataOrigion,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.hywa.pricepublish.dao.entity.PriceCrawlerDataExample" resultType="java.lang.Integer">
+    select count(*) from t_prices
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <select id="selectByMultiCondition"
+    resultType="com.hywa.pricepublish.dao.entity.PriceCrawlerData">
+    select
+    name,
+    price,
+    price_unit,
+    market,
+    region,
+    date_format(update_time,'%Y-%m-%d'),
+    specification,
+    data_origion,
+    price_type
+    from t_prices t
+    where 1=1
+    <if test="priceType!= null and priceType!= ''">
+      AND t.price_type LIKE concat('%',#{priceType},'%')
+    </if>
+    <if test="startTime != null and startTime != ''">
+      AND t.update_time <![CDATA[>=]]> #{startTime}
+    </if>
+    <if test="endTime != null and endTime != ''">
+      AND t.update_time <![CDATA[<=]]>#{endTime}
+    </if>
+    <if test="productNameOrMarketName!= null and productNameOrMarketName!= ''"> <!-- 联合模糊查询 -->
+      AND( t.name LIKE concat('%',#{productNameOrMarketName},'%')
+      or t.market LIKE concat('%',#{productNameOrMarketName},'%'))
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update t_prices
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.name != null">
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.price != null">
+        price = #{record.price,jdbcType=VARCHAR},
+      </if>
+      <if test="record.priceUnit != null">
+        price_unit = #{record.priceUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="record.market != null">
+        market = #{record.market,jdbcType=VARCHAR},
+      </if>
+      <if test="record.region != null">
+        region = #{record.region,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{record.updateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.specification != null">
+        specification = #{record.specification,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dataOrigion != null">
+        data_origion = #{record.dataOrigion,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_prices
+    set id = #{record.id,jdbcType=BIGINT},
+      name = #{record.name,jdbcType=VARCHAR},
+      price = #{record.price,jdbcType=VARCHAR},
+      price_unit = #{record.priceUnit,jdbcType=VARCHAR},
+      market = #{record.market,jdbcType=VARCHAR},
+      region = #{record.region,jdbcType=VARCHAR},
+      update_time = #{record.updateTime,jdbcType=VARCHAR},
+      specification = #{record.specification,jdbcType=VARCHAR},
+      data_origion = #{record.dataOrigion,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hywa.pricepublish.dao.entity.PriceCrawlerData">
+    update t_prices
+    <set>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null">
+        price = #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="priceUnit != null">
+        price_unit = #{priceUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="market != null">
+        market = #{market,jdbcType=VARCHAR},
+      </if>
+      <if test="region != null">
+        region = #{region,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="specification != null">
+        specification = #{specification,jdbcType=VARCHAR},
+      </if>
+      <if test="dataOrigion != null">
+        data_origion = #{dataOrigion,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hywa.pricepublish.dao.entity.PriceCrawlerData">
+    update t_prices
+    set name = #{name,jdbcType=VARCHAR},
+      price = #{price,jdbcType=VARCHAR},
+      price_unit = #{priceUnit,jdbcType=VARCHAR},
+      market = #{market,jdbcType=VARCHAR},
+      region = #{region,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=VARCHAR},
+      specification = #{specification,jdbcType=VARCHAR},
+      data_origion = #{dataOrigion,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,0 +1,88 @@
+2018-08-06 17:50:44,322 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 12108 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-06 17:50:44,329 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-06 17:50:44,333 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-06 17:50:50,669 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 7.01 seconds (JVM running for 11.511)
+2018-08-06 17:51:08,137 INFO (TokenAuthorFilter.java:100)- token filter过滤ok!
+2018-08-06 17:51:08,173 ERROR (GlobalDefaultExceptionHandler.java:61)- http://192.168.1.81:8080/user/pcLogin<:=====:>GET<:=====:>userName=test_zcy&pwd=123456<:=====:>Required String parameter 'password' is not present
+2018-08-06 17:51:08,176 ERROR (GlobalDefaultExceptionHandler.java:88)- class org.springframework.web.bind.MissingServletRequestParameterException
+2018-08-06 17:51:08,553 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-08-06 17:51:08,662 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 7bae13627c004aa48987490e042b8367(String), 临时用户(String), 192.168.1.81(String), /user/pcLogin(String), 192.168.1.81(String), 8792(Integer), null, null, 2018-08-06 17:51:08.172(Timestamp), Required String parameter 'password' is not present(String), userName=test_zcy&pwd=123456(String)
+2018-08-06 17:51:08,691 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-08-06 17:51:29,303 INFO (TokenAuthorFilter.java:100)- token filter过滤ok!
+2018-08-06 17:51:29,325 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info user where user.name = ? and is_del=0 
+2018-08-06 17:51:29,360 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: test_zcy(String)
+2018-08-06 17:51:29,375 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-08-06 17:51:29,405 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select user_id, region_id, type from user_ref_area WHERE ( user_id = ? ) 
+2018-08-06 17:51:29,406 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: f0917cb9665b407f82013e7c5d8e0a72(String)
+2018-08-06 17:51:29,408 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-08-06 17:53:15,591 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 12108 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-06 17:53:15,591 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-06 17:53:15,591 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-06 17:53:18,917 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.401 seconds (JVM running for 159.75)
+2018-08-06 17:53:27,501 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 12108 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-06 17:53:27,501 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-06 17:53:27,501 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-06 17:53:31,463 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.988 seconds (JVM running for 172.295)
+2018-08-06 17:53:53,294 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 12108 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-06 17:53:53,294 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-06 17:53:53,295 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-06 17:54:00,662 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 12108 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-06 17:54:00,662 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-06 17:54:00,663 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-06 17:54:02,996 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 2.375 seconds (JVM running for 203.827)
+2018-08-06 17:54:42,449 INFO (TokenAuthorFilter.java:89)- pc&f0917cb9665b407f82013e7c5d8e0a72_7dd71f0e1da54aebb87fbff1102503d7
+2018-08-06 17:54:42,450 INFO (RedisTokenManager.java:36)- tokenModel : TokenModel(userId=pc&f0917cb9665b407f82013e7c5d8e0a72, token=7dd71f0e1da54aebb87fbff1102503d7)
+2018-08-06 17:54:42,477 INFO (TokenAuthorFilter.java:100)- token filter过滤ok!
+2018-08-06 17:57:41,825 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11328 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-06 17:57:41,827 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-06 17:57:41,831 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-06 17:57:49,463 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 9.094 seconds (JVM running for 10.897)
+2018-08-06 17:57:54,652 INFO (TokenAuthorFilter.java:89)- pc&f0917cb9665b407f82013e7c5d8e0a72_7dd71f0e1da54aebb87fbff1102503d7
+2018-08-06 17:57:54,653 INFO (RedisTokenManager.java:36)- tokenModel : TokenModel(userId=pc&f0917cb9665b407f82013e7c5d8e0a72, token=7dd71f0e1da54aebb87fbff1102503d7)
+2018-08-06 17:57:54,932 INFO (TokenAuthorFilter.java:100)- token filter过滤ok!
+2018-08-06 17:59:02,902 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10460 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-06 17:59:02,903 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-06 17:59:02,905 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-06 17:59:10,145 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 7.811 seconds (JVM running for 9.506)
+2018-08-06 17:59:13,273 INFO (TokenAuthorFilter.java:89)- pc&f0917cb9665b407f82013e7c5d8e0a72_7dd71f0e1da54aebb87fbff1102503d7
+2018-08-06 17:59:13,274 INFO (RedisTokenManager.java:36)- tokenModel : TokenModel(userId=pc&f0917cb9665b407f82013e7c5d8e0a72, token=7dd71f0e1da54aebb87fbff1102503d7)
+2018-08-06 17:59:13,519 INFO (TokenAuthorFilter.java:100)- token filter过滤ok!
+2018-08-06 18:03:08,956 ERROR (GlobalDefaultExceptionHandler.java:61)- http://192.168.1.81:8080/file/collectData/getExcel<:=====:>POST<:=====:>tableName=%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE&tableTitle=%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE%E5%B1%95%E7%A4%BA&sheetName=%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE<:=====:>Could not find acceptable representation
+2018-08-06 18:03:08,966 ERROR (GlobalDefaultExceptionHandler.java:93)- class org.springframework.web.HttpMediaTypeNotAcceptableException:Could not find acceptable representation
+2018-08-06 18:03:13,789 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 12252 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-06 18:03:13,792 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-06 18:03:13,808 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-06 18:03:20,864 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 8.307 seconds (JVM running for 10.212)
+2018-08-06 18:03:26,537 INFO (TokenAuthorFilter.java:89)- pc&f0917cb9665b407f82013e7c5d8e0a72_7dd71f0e1da54aebb87fbff1102503d7
+2018-08-06 18:03:26,537 INFO (RedisTokenManager.java:36)- tokenModel : TokenModel(userId=pc&f0917cb9665b407f82013e7c5d8e0a72, token=7dd71f0e1da54aebb87fbff1102503d7)
+2018-08-06 18:03:26,872 INFO (TokenAuthorFilter.java:100)- token filter过滤ok!
+2018-08-06 18:04:23,104 ERROR (GlobalDefaultExceptionHandler.java:61)- http://192.168.1.81:8080/file/collectData/getExcel<:=====:>POST<:=====:>tableName=%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE&tableTitle=%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE%E5%B1%95%E7%A4%BA&sheetName=%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE<:=====:>Could not find acceptable representation
+2018-08-06 18:04:23,118 ERROR (GlobalDefaultExceptionHandler.java:93)- class org.springframework.web.HttpMediaTypeNotAcceptableException:Could not find acceptable representation
+2018-08-06 18:04:29,063 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 11856 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-06 18:04:29,064 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-06 18:04:29,066 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-06 18:04:35,167 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 6.988 seconds (JVM running for 8.339)
+2018-08-06 18:04:37,845 INFO (TokenAuthorFilter.java:89)- pc&f0917cb9665b407f82013e7c5d8e0a72_7dd71f0e1da54aebb87fbff1102503d7
+2018-08-06 18:04:37,846 INFO (RedisTokenManager.java:36)- tokenModel : TokenModel(userId=pc&f0917cb9665b407f82013e7c5d8e0a72, token=7dd71f0e1da54aebb87fbff1102503d7)
+2018-08-06 18:04:38,176 INFO (TokenAuthorFilter.java:100)- token filter过滤ok!
+2018-08-06 18:05:16,655 ERROR (GlobalDefaultExceptionHandler.java:61)- http://192.168.1.81:8080/file/collectData/getExcel<:=====:>POST<:=====:>tableName=%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE&tableTitle=%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE%E5%B1%95%E7%A4%BA&sheetName=%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE<:=====:>Could not find acceptable representation
+2018-08-06 18:05:16,667 ERROR (GlobalDefaultExceptionHandler.java:93)- class org.springframework.web.HttpMediaTypeNotAcceptableException:Could not find acceptable representation
+2018-08-06 18:05:21,932 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 3484 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-06 18:05:21,936 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-06 18:05:21,938 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-06 18:05:29,351 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 8.313 seconds (JVM running for 10.213)
+2018-08-06 18:05:34,977 INFO (TokenAuthorFilter.java:89)- pc&f0917cb9665b407f82013e7c5d8e0a72_7dd71f0e1da54aebb87fbff1102503d7
+2018-08-06 18:05:34,978 INFO (RedisTokenManager.java:36)- tokenModel : TokenModel(userId=pc&f0917cb9665b407f82013e7c5d8e0a72, token=7dd71f0e1da54aebb87fbff1102503d7)
+2018-08-06 18:05:36,041 INFO (TokenAuthorFilter.java:100)- token filter过滤ok!
+2018-08-06 18:05:36,259 ERROR (GlobalDefaultExceptionHandler.java:61)- http://192.168.1.81:8080/file/collectData/getExcel<:=====:>POST<:=====:>tableName=%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE&tableTitle=%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE%E5%B1%95%E7%A4%BA&sheetName=%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE<:=====:>Handler dispatch failed; nested exception is java.lang.NoClassDefFoundError: com/hywa/pricepublish/common/utils/ExcelUtils
+2018-08-06 18:05:36,342 ERROR (GlobalDefaultExceptionHandler.java:93)- class org.springframework.web.util.NestedServletException:Handler dispatch failed; nested exception is java.lang.NoClassDefFoundError: com/hywa/pricepublish/common/utils/ExcelUtils
+2018-08-06 18:05:36,852 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-08-06 18:05:37,397 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: d080ce73f1fa4de597e1aa6cae5f5fb7(String), 临时用户(String), 192.168.1.81(String), /file/collectData/getExcel(String), 192.168.1.81(String), 11127(Integer), null, null, 2018-08-06 18:05:36.259(Timestamp), Handler dispatch failed; nested exception is java.lang.NoClassDefFoundError: com/hywa/pricepublish/common/utils/ExcelUtils(String), tableName=%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE&tableTitle=%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE%E5%B1%95%E7%A4%BA&sheetName=%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE(String)
+2018-08-06 18:05:37,455 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-08-06 18:05:37,954 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 3484 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-06 18:05:37,954 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-06 18:05:37,955 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-06 18:05:40,731 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 2.828 seconds (JVM running for 21.591)
+2018-08-06 18:05:44,783 INFO (TokenAuthorFilter.java:89)- pc&f0917cb9665b407f82013e7c5d8e0a72_7dd71f0e1da54aebb87fbff1102503d7
+2018-08-06 18:05:44,784 INFO (RedisTokenManager.java:36)- tokenModel : TokenModel(userId=pc&f0917cb9665b407f82013e7c5d8e0a72, token=7dd71f0e1da54aebb87fbff1102503d7)
+2018-08-06 18:05:44,800 INFO (TokenAuthorFilter.java:100)- token filter过滤ok!

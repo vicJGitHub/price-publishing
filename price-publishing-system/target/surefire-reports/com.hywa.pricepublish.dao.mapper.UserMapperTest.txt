@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.hywa.pricepublish.dao.mapper.UserMapperTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.364 s <<< FAILURE! - in com.hywa.pricepublish.dao.mapper.UserMapperTest
+selectByUserName(com.hywa.pricepublish.dao.mapper.UserMapperTest)  Time elapsed: 0.596 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[{"age":18,"id":"9960267a094e484fa77601dd66c5f2b9","isDel":0,"name":"jzz","password":"E10ADC3949BA59ABBE56E057F20F883E","workUnit":"»ÛÔÆÍø°²"}]> but was:<[null]>
+	at com.hywa.pricepublish.dao.mapper.UserMapperTest.selectByUserName(UserMapperTest.java:69)
+

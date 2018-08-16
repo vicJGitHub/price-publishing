@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hywa.pricepublish.dao.mapper.TemplateProductMapper">
+  <resultMap id="BaseResultMap" type="com.hywa.pricepublish.dao.entity.TemplateProduct">
+    <id column="id" property="id" jdbcType="VARCHAR"/>
+    <result column="template_id" property="templateId" jdbcType="VARCHAR"/>
+    <result column="product_id" property="productId" jdbcType="VARCHAR"/>
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                    separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                    separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, template_id, product_id
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap"
+    parameterType="com.hywa.pricepublish.dao.entity.TemplateProductExample">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List"/>
+    from template_ref_product
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause"/>
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select
+    <include refid="Base_Column_List"/>
+    from template_ref_product
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from template_ref_product
+    where template_id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample"
+    parameterType="com.hywa.pricepublish.dao.entity.TemplateProductExample">
+    delete from template_ref_product
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause"/>
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.hywa.pricepublish.dao.entity.TemplateProduct">
+    insert ignore into template_ref_product (id, template_id, product_id
+      )
+    values (#{id,jdbcType=VARCHAR}, #{templateId,jdbcType=VARCHAR}, #{productId,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.hywa.pricepublish.dao.entity.TemplateProduct">
+    insert into template_ref_product
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="templateId != null">
+        template_id,
+      </if>
+      <if test="productId != null">
+        product_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="templateId != null">
+        #{templateId,jdbcType=VARCHAR},
+      </if>
+      <if test="productId != null">
+        #{productId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <insert id="insertBatch">
+    insert ignore into template_ref_product (id, template_id, product_id)
+    values
+    <foreach collection="list" item="templateRefProduct" separator=",">
+     (#{id,jdbcType=VARCHAR}, #{templateId,jdbcType=VARCHAR}, #{productId,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+  <select id="countByExample"
+    parameterType="com.hywa.pricepublish.dao.entity.TemplateProductExample"
+    resultType="java.lang.Integer">
+    select count(*) from template_ref_product
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause"/>
+    </if>
+  </select>
+  <!--查询商品通过模版商品关联表-->
+  <select id="selectProductByTemplateId" resultType="com.hywa.pricepublish.dao.entity.Product">
+      select p.id,p.name, p.specification, b.name unit from product_info p left join dict b on p.unit = b.id
+      where exists (select * from template_ref_product where template_id =#{templateId} and p.id = product_id)
+    </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update template_ref_product
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.templateId != null">
+        template_id = #{record.templateId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productId != null">
+        product_id = #{record.productId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause"/>
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update template_ref_product
+    set id = #{record.id,jdbcType=VARCHAR},
+    template_id = #{record.templateId,jdbcType=VARCHAR},
+    product_id = #{record.productId,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause"/>
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective"
+    parameterType="com.hywa.pricepublish.dao.entity.TemplateProduct">
+    update template_ref_product
+    <set>
+      <if test="templateId != null">
+        template_id = #{templateId,jdbcType=VARCHAR},
+      </if>
+      <if test="productId != null">
+        product_id = #{productId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hywa.pricepublish.dao.entity.TemplateProduct">
+    update template_ref_product
+    set template_id = #{templateId,jdbcType=VARCHAR},
+      product_id = #{productId,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hywa.pricepublish.dao.mapper.PrContentInfoMapper">
+    <resultMap id="BaseResultMap" type="com.hywa.pricepublish.dao.entity.PrContentInfo">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="title" property="title" jdbcType="VARCHAR"/>
+        <result column="browsing_num" property="browsingNum" jdbcType="INTEGER"/>
+        <result column="published_time" property="publishedTime" jdbcType="TIMESTAMP"/>
+        <result column="auther" property="auther" jdbcType="VARCHAR"/>
+        <result column="is_recommend" property="isRecommend" jdbcType="SMALLINT"/>
+        <result column="is_userble" property="isUserble" jdbcType="SMALLINT"/>
+        <result column="cover" property="cover" jdbcType="VARCHAR"/>
+        <result column="summary" property="summary" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="create_user" property="createUser" jdbcType="VARCHAR"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="update_user" property="updateUser" jdbcType="VARCHAR"/>
+        <result column="content_id" property="contentId" jdbcType="VARCHAR"/>
+        <result column="is_del" property="isDel" jdbcType="SMALLINT"/>
+    </resultMap>
+    <sql id="Example_Where_Clause">
+        <where>
+            <foreach collection="oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" suffix=")" prefixOverrides="and">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+    <sql id="Update_By_Example_Where_Clause">
+        <where>
+            <foreach collection="example.oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" suffix=")" prefixOverrides="and">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+    <sql id="Base_Column_List">
+    id, name, title, browsing_num, published_time, auther, is_recommend, is_userble, 
+    cover, summary, create_time, create_user, update_time, update_user, content_id, is_del
+  </sql>
+    <select id="selectByExample" resultMap="BaseResultMap"
+            parameterType="com.hywa.pricepublish.dao.entity.PrContentInfoExample">
+        select
+        <if test="distinct">
+            distinct
+        </if>
+        <include refid="Base_Column_List"/>
+        from pr_content_info
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+        <if test="orderByClause != null">
+            order by ${orderByClause}
+        </if>
+    </select>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from pr_content_info
+        where id = #{id,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from pr_content_info
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+    <delete id="deleteByExample" parameterType="com.hywa.pricepublish.dao.entity.PrContentInfoExample">
+        delete from pr_content_info
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </delete>
+    <insert id="insert" parameterType="com.hywa.pricepublish.dao.entity.PrContentInfo">
+    insert into pr_content_info (id, name, title, 
+      browsing_num, published_time, auther, 
+      is_recommend, is_userble, cover, 
+      summary, create_time, create_user, 
+      update_time, update_user, content_id, 
+      is_del)
+    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, 
+      #{browsingNum,jdbcType=INTEGER}, #{publishedTime,jdbcType=TIMESTAMP}, #{auther,jdbcType=VARCHAR}, 
+      #{isRecommend,jdbcType=SMALLINT}, #{isUserble,jdbcType=SMALLINT}, #{cover,jdbcType=VARCHAR}, 
+      #{summary,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{createUser,jdbcType=VARCHAR}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{updateUser,jdbcType=VARCHAR}, #{contentId,jdbcType=VARCHAR}, 
+      #{isDel,jdbcType=SMALLINT})
+  </insert>
+    <insert id="insertSelective" parameterType="com.hywa.pricepublish.dao.entity.PrContentInfo">
+        insert into pr_content_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="title != null">
+                title,
+            </if>
+            <if test="browsingNum != null">
+                browsing_num,
+            </if>
+            <if test="publishedTime != null">
+                published_time,
+            </if>
+            <if test="auther != null">
+                auther,
+            </if>
+            <if test="isRecommend != null">
+                is_recommend,
+            </if>
+            <if test="isUserble != null">
+                is_userble,
+            </if>
+            <if test="cover != null">
+                cover,
+            </if>
+            <if test="summary != null">
+                summary,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="createUser != null">
+                create_user,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+            <if test="updateUser != null">
+                update_user,
+            </if>
+            <if test="contentId != null">
+                content_id,
+            </if>
+            <if test="isDel != null">
+                is_del,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="browsingNum != null">
+                #{browsingNum,jdbcType=INTEGER},
+            </if>
+            <if test="publishedTime != null">
+                #{publishedTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="auther != null">
+                #{auther,jdbcType=VARCHAR},
+            </if>
+            <if test="isRecommend != null">
+                #{isRecommend,jdbcType=SMALLINT},
+            </if>
+            <if test="isUserble != null">
+                #{isUserble,jdbcType=SMALLINT},
+            </if>
+            <if test="cover != null">
+                #{cover,jdbcType=VARCHAR},
+            </if>
+            <if test="summary != null">
+                #{summary,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="createUser != null">
+                #{createUser,jdbcType=VARCHAR},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateUser != null">
+                #{updateUser,jdbcType=VARCHAR},
+            </if>
+            <if test="contentId != null">
+                #{contentId,jdbcType=VARCHAR},
+            </if>
+            <if test="isDel != null">
+                #{isDel,jdbcType=SMALLINT},
+            </if>
+        </trim>
+    </insert>
+    <select id="countByExample" parameterType="com.hywa.pricepublish.dao.entity.PrContentInfoExample"
+            resultType="java.lang.Integer">
+        select count(*) from pr_content_info
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </select>
+    <update id="updateByExampleSelective" parameterType="map">
+        update pr_content_info
+        <set>
+            <if test="record.id != null">
+                id = #{record.id,jdbcType=VARCHAR},
+            </if>
+            <if test="record.name != null">
+                name = #{record.name,jdbcType=VARCHAR},
+            </if>
+            <if test="record.title != null">
+                title = #{record.title,jdbcType=VARCHAR},
+            </if>
+            <if test="record.browsingNum != null">
+                browsing_num = #{record.browsingNum,jdbcType=INTEGER},
+            </if>
+            <if test="record.publishedTime != null">
+                published_time = #{record.publishedTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="record.auther != null">
+                auther = #{record.auther,jdbcType=VARCHAR},
+            </if>
+            <if test="record.isRecommend != null">
+                is_recommend = #{record.isRecommend,jdbcType=SMALLINT},
+            </if>
+            <if test="record.isUserble != null">
+                is_userble = #{record.isUserble,jdbcType=SMALLINT},
+            </if>
+            <if test="record.cover != null">
+                cover = #{record.cover,jdbcType=VARCHAR},
+            </if>
+            <if test="record.summary != null">
+                summary = #{record.summary,jdbcType=VARCHAR},
+            </if>
+            <if test="record.createTime != null">
+                create_time = #{record.createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="record.createUser != null">
+                create_user = #{record.createUser,jdbcType=VARCHAR},
+            </if>
+            <if test="record.updateTime != null">
+                update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="record.updateUser != null">
+                update_user = #{record.updateUser,jdbcType=VARCHAR},
+            </if>
+            <if test="record.contentId != null">
+                content_id = #{record.contentId,jdbcType=VARCHAR},
+            </if>
+            <if test="record.isDel != null">
+                is_del = #{record.isDel,jdbcType=SMALLINT},
+            </if>
+        </set>
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByExample" parameterType="map">
+        update pr_content_info
+        set id = #{record.id,jdbcType=VARCHAR},
+        name = #{record.name,jdbcType=VARCHAR},
+        title = #{record.title,jdbcType=VARCHAR},
+        browsing_num = #{record.browsingNum,jdbcType=INTEGER},
+        published_time = #{record.publishedTime,jdbcType=TIMESTAMP},
+        auther = #{record.auther,jdbcType=VARCHAR},
+        is_recommend = #{record.isRecommend,jdbcType=SMALLINT},
+        is_userble = #{record.isUserble,jdbcType=SMALLINT},
+        cover = #{record.cover,jdbcType=VARCHAR},
+        summary = #{record.summary,jdbcType=VARCHAR},
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+        create_user = #{record.createUser,jdbcType=VARCHAR},
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+        update_user = #{record.updateUser,jdbcType=VARCHAR},
+        content_id = #{record.contentId,jdbcType=VARCHAR},
+        is_del = #{record.isDel,jdbcType=SMALLINT}
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByPrimaryKeySelective" parameterType="com.hywa.pricepublish.dao.entity.PrContentInfo">
+        update pr_content_info
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="browsingNum != null">
+                browsing_num = #{browsingNum,jdbcType=INTEGER},
+            </if>
+            <if test="publishedTime != null">
+                published_time = #{publishedTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="auther != null">
+                auther = #{auther,jdbcType=VARCHAR},
+            </if>
+            <if test="isRecommend != null">
+                is_recommend = #{isRecommend,jdbcType=SMALLINT},
+            </if>
+            <if test="isUserble != null">
+                is_userble = #{isUserble,jdbcType=SMALLINT},
+            </if>
+            <if test="cover != null">
+                cover = #{cover,jdbcType=VARCHAR},
+            </if>
+            <if test="summary != null">
+                summary = #{summary,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="createUser != null">
+                create_user = #{createUser,jdbcType=VARCHAR},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateUser != null">
+                update_user = #{updateUser,jdbcType=VARCHAR},
+            </if>
+            <if test="contentId != null">
+                content_id = #{contentId,jdbcType=VARCHAR},
+            </if>
+            <if test="isDel != null">
+                is_del = #{isDel,jdbcType=SMALLINT},
+            </if>
+        </set>
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.hywa.pricepublish.dao.entity.PrContentInfo">
+    update pr_content_info
+    set name = #{name,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      browsing_num = #{browsingNum,jdbcType=INTEGER},
+      published_time = #{publishedTime,jdbcType=TIMESTAMP},
+      auther = #{auther,jdbcType=VARCHAR},
+      is_recommend = #{isRecommend,jdbcType=SMALLINT},
+      is_userble = #{isUserble,jdbcType=SMALLINT},
+      cover = #{cover,jdbcType=VARCHAR},
+      summary = #{summary,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      create_user = #{createUser,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      update_user = #{updateUser,jdbcType=VARCHAR},
+      content_id = #{contentId,jdbcType=VARCHAR},
+      is_del = #{isDel,jdbcType=SMALLINT}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+    <!--标题,发表时间,正文-->
+    <select id="findContentById" resultType="com.hywa.pricepublish.representation.PrContentInfoRep">
+      SELECT
+	      info.*,
+          content.content content
+      FROM
+	      pr_content_info info
+      LEFT JOIN pr_content content ON info.content_id = content.id
+      WHERE
+	      info.is_del = 0
+      AND
+          content.is_del = 0
+      AND
+          info.id=#{id}
+  </select>
+</mapper>

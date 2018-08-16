@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hywa.pricepublish.dao.mapper.MenuMapper">
+    <resultMap id="BaseResultMap" type="com.hywa.pricepublish.dao.entity.Menu">
+        <id column="id" property="id" jdbcType="CHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="description" property="description" jdbcType="VARCHAR"/>
+        <result column="sort" property="sort" jdbcType="SMALLINT"/>
+        <result column="icon" property="icon" jdbcType="VARCHAR"/>
+        <result column="create_Time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_Time" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="is_del" property="isDel" jdbcType="SMALLINT"/>
+        <result column="status" property="status" jdbcType="SMALLINT"/>
+        <result column="parent_id" property="parentId" jdbcType="CHAR"/>
+        <result column="type" property="type" jdbcType="SMALLINT"/>
+    </resultMap>
+    <sql id="Example_Where_Clause">
+        <where>
+            <foreach collection="oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" suffix=")" prefixOverrides="and">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+    <sql id="Update_By_Example_Where_Clause">
+        <where>
+            <foreach collection="example.oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" suffix=")" prefixOverrides="and">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+    <sql id="Base_Column_List">
+    id, name, description, sort, icon, is_del, status, parent_id, type
+  </sql>
+    <select id="selectByExample" resultMap="BaseResultMap"
+            parameterType="com.hywa.pricepublish.dao.entity.MenuExample">
+        select
+        <if test="distinct">
+            distinct
+        </if>
+        <include refid="Base_Column_List"/>
+        from menu_info
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+        <if test="orderByClause != null">
+            order by ${orderByClause}
+        </if>
+    </select>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from menu_info
+        where id = #{id,jdbcType=CHAR}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update menu_info
+    set is_del = 1
+    where id = #{id,jdbcType=CHAR}
+  </delete>
+    <delete id="deleteByExample" parameterType="com.hywa.pricepublish.dao.entity.MenuExample">
+        delete from menu_info
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </delete>
+    <insert id="insert" parameterType="com.hywa.pricepublish.dao.entity.Menu">
+    insert into menu_info (id, name, description, 
+      sort, icon, create_Time, 
+      update_Time, is_del, status, 
+      parent_id, type)
+    values (#{id,jdbcType=CHAR}, #{name,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, 
+      #{sort,jdbcType=SMALLINT}, #{icon,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{isDel,jdbcType=SMALLINT}, #{status,jdbcType=SMALLINT}, 
+      #{parentId,jdbcType=CHAR}, #{type,jdbcType=SMALLINT})
+  </insert>
+
+    <insert id="insertSelective" parameterType="com.hywa.pricepublish.dao.entity.Menu">
+        insert into menu_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="description != null">
+                description,
+            </if>
+            <if test="sort != null">
+                sort,
+            </if>
+            <if test="icon != null">
+                icon,
+            </if>
+            <if test="createTime != null">
+                create_Time,
+            </if>
+            <if test="updateTime != null">
+                update_Time,
+            </if>
+            <if test="createUser != null">
+                create_user,
+            </if>
+            <if test="updateUser != null">
+                update_user,
+            </if>
+            <if test="isDel != null">
+                is_del,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="parentId != null">
+                parent_id,
+            </if>
+            <if test="type != null">
+                type,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=CHAR},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null">
+                #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null">
+                #{sort,jdbcType=SMALLINT},
+            </if>
+            <if test="icon != null">
+                #{icon,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="createUser != null">
+                #{createUser,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateUser != null">
+                #{updateUser,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isDel != null">
+                #{isDel,jdbcType=SMALLINT},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=SMALLINT},
+            </if>
+            <if test="parentId != null">
+                #{parentId,jdbcType=CHAR},
+            </if>
+            <if test="type != null">
+                #{type,jdbcType=SMALLINT},
+            </if>
+        </trim>
+    </insert>
+    <select id="countByExample" parameterType="com.hywa.pricepublish.dao.entity.MenuExample"
+            resultType="java.lang.Integer">
+        select count(*) from menu_info
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </select>
+    <!--根据用户ID查找菜单-->
+    <select id="selectMenusByUserId" resultType="com.hywa.pricepublish.dao.entity.Menu">
+        SELECT
+	      menu_info.*
+        FROM
+	      (
+		    SELECT DISTINCT
+			  menu_info.id
+		    FROM
+			  user_ref_role
+		    LEFT JOIN role_ref_menu
+		    ON role_ref_menu.role_id = user_ref_role.role_id
+		    RIGHT JOIN menu_info
+		    ON role_ref_menu.menu_id = menu_info.id
+		    WHERE
+			  user_ref_role.user_id = #{userId}
+	      ) temMenu
+        LEFT JOIN menu_info ON temMenu.id = menu_info.id
+        ORDER BY menu_info.sort DESC
+  </select>
+    <!--根据用户ID和父菜单Id查找菜单-->
+    <select id="selectByUserIdAndParentId"
+            resultType="com.hywa.pricepublish.dao.entity.Menu">
+       select menu_info.*
+	from
+	(	select distinct menu_info.id
+		from user_ref_role
+		left join role_ref_menu
+		on role_ref_menu.role_id=user_ref_role.role_id
+		left join menu_info
+		on role_ref_menu.menu_id=menu_info.id
+		where user_ref_role.user_id=#{userId}) temMenu
+	left join menu_info
+	on temMenu.id=menu_info.id
+    where menu_info.parent_id=#{menuId}
+    ORDER BY menu_info.sort DESC
+  </select>
+    <!--根据角色ID查询菜单-->
+    <select id="selectByRoleId" resultType="com.hywa.pricepublish.dao.entity.Menu">
+    select * from menu_info left join role_ref_menu on menu_info.id = role_ref_menu.menu_id
+    where role_ref_menu.role_id = #{roleId}
+    and menu_info.is_del = 0
+    ORDER BY menu_info.sort DESC
+  </select>
+    <!--查询所有父级菜单-->
+    <select id="selectBaseMenu" resultType="com.hywa.pricepublish.dao.entity.Menu">
+    select menu_info.* from menu_info
+    where  menu_info.parent_id = '#'
+  </select>
+    <!--根据父菜单ID查询所有菜单-->
+    <select id="selectByParentId" resultType="com.hywa.pricepublish.dao.entity.Menu">
+    select menu_info.*
+    from menu_info
+    where menu_info.parent_id=#{parentId}
+  </select>
+
+    <update id="updateByExampleSelective" parameterType="map">
+        update menu_info
+        <set>
+            <if test="record.id != null">
+                id = #{record.id,jdbcType=CHAR},
+            </if>
+            <if test="record.name != null">
+                name = #{record.name,jdbcType=VARCHAR},
+            </if>
+            <if test="record.description != null">
+                description = #{record.description,jdbcType=VARCHAR},
+            </if>
+            <if test="record.sort != null">
+                sort = #{record.sort,jdbcType=SMALLINT},
+            </if>
+            <if test="record.icon != null">
+                icon = #{record.icon,jdbcType=VARCHAR},
+            </if>
+            <if test="record.createTime != null">
+                create_Time = #{record.createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="record.updateTime != null">
+                update_Time = #{record.updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="record.isDel != null">
+                is_del = #{record.isDel,jdbcType=SMALLINT},
+            </if>
+            <if test="record.status != null">
+                status = #{record.status,jdbcType=SMALLINT},
+            </if>
+            <if test="record.parentId != null">
+                parent_id = #{record.parentId,jdbcType=CHAR},
+            </if>
+            <if test="record.type != null">
+                type = #{record.type,jdbcType=SMALLINT},
+            </if>
+        </set>
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByExample" parameterType="map">
+        update menu_info
+        set id = #{record.id,jdbcType=CHAR},
+        name = #{record.name,jdbcType=VARCHAR},
+        description = #{record.description,jdbcType=VARCHAR},
+        sort = #{record.sort,jdbcType=SMALLINT},
+        icon = #{record.icon,jdbcType=VARCHAR},
+        create_Time = #{record.createTime,jdbcType=TIMESTAMP},
+        update_Time = #{record.updateTime,jdbcType=TIMESTAMP},
+        is_del = #{record.isDel,jdbcType=SMALLINT},
+        status = #{record.status,jdbcType=SMALLINT},
+        parent_id = #{record.parentId,jdbcType=CHAR},
+        type = #{record.type,jdbcType=SMALLINT}
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByPrimaryKeySelective" parameterType="com.hywa.pricepublish.dao.entity.Menu">
+        update menu_info
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null">
+                description = #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null">
+                sort = #{sort,jdbcType=SMALLINT},
+            </if>
+            <if test="icon != null">
+                icon = #{icon,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                create_Time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_Time = #{updateTime,jdbcType=TIMESTAMP},
+            </if> <if test="createTime != null">
+                create_user = #{createUser,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_user = #{updateUser,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isDel != null">
+                is_del = #{isDel,jdbcType=SMALLINT},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=SMALLINT},
+            </if>
+            <if test="parentId != null">
+                parent_id = #{parentId,jdbcType=CHAR},
+            </if>
+            <if test="type != null">
+                type = #{type,jdbcType=SMALLINT},
+            </if>
+        </set>
+        where id = #{id,jdbcType=CHAR}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.hywa.pricepublish.dao.entity.Menu">
+    update menu_info
+    set name = #{name,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      sort = #{sort,jdbcType=SMALLINT},
+      icon = #{icon,jdbcType=VARCHAR},
+      create_Time = #{createTime,jdbcType=TIMESTAMP},
+      update_Time = #{updateTime,jdbcType=TIMESTAMP},
+      is_del = #{isDel,jdbcType=SMALLINT},
+      status = #{status,jdbcType=SMALLINT},
+      parent_id = #{parentId,jdbcType=CHAR},
+      type = #{type,jdbcType=SMALLINT}
+    where id = #{id,jdbcType=CHAR}
+  </update>
+</mapper>

@@ -1,0 +1,79 @@
+2018-08-07 09:54:02,471 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 8868 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-07 09:54:02,478 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-07 09:54:02,480 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-07 09:54:15,721 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 13.828 seconds (JVM running for 17.623)
+2018-08-07 09:54:41,016 INFO (TokenAuthorFilter.java:100)- token filter过滤ok!
+2018-08-07 09:54:41,088 ERROR (GlobalDefaultExceptionHandler.java:61)- http://192.168.1.81:8080/user/pcLogin<:=====:>GET<:=====:>userName=test_zcy&pwd=123456<:=====:>Required String parameter 'password' is not present
+2018-08-07 09:54:41,094 ERROR (GlobalDefaultExceptionHandler.java:88)- class org.springframework.web.bind.MissingServletRequestParameterException
+2018-08-07 09:54:41,641 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-08-07 09:54:42,081 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: cc6dec8ee72140628f58146e5503e849(String), 临时用户(String), 192.168.1.81(String), /user/pcLogin(String), 192.168.1.81(String), 4573(Integer), null, null, 2018-08-07 09:54:41.087(Timestamp), Required String parameter 'password' is not present(String), userName=test_zcy&pwd=123456(String)
+2018-08-07 09:54:42,120 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-08-07 09:55:07,142 INFO (TokenAuthorFilter.java:100)- token filter过滤ok!
+2018-08-07 09:55:07,187 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info user where user.name = ? and is_del=0 
+2018-08-07 09:55:07,233 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: test_zcy(String)
+2018-08-07 09:55:07,252 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-08-07 09:55:07,286 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select user_id, region_id, type from user_ref_area WHERE ( user_id = ? ) 
+2018-08-07 09:55:07,287 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: f0917cb9665b407f82013e7c5d8e0a72(String)
+2018-08-07 09:55:07,289 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-08-07 09:56:02,321 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 10356 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-07 09:56:02,322 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-07 09:56:02,332 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-07 09:56:09,827 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 8.131 seconds (JVM running for 10.773)
+2018-08-07 09:56:43,669 INFO (TokenAuthorFilter.java:89)- pc&f0917cb9665b407f82013e7c5d8e0a72_98c9e90e95704a5d96a5711526b928da
+2018-08-07 09:56:43,670 INFO (RedisTokenManager.java:36)- tokenModel : TokenModel(userId=pc&f0917cb9665b407f82013e7c5d8e0a72, token=98c9e90e95704a5d96a5711526b928da)
+2018-08-07 09:56:43,930 INFO (TokenAuthorFilter.java:100)- token filter过滤ok!
+2018-08-07 09:56:43,957 INFO (FileUtils.java:89)- xbb.jpg: 下载成功
+2018-08-07 09:56:43,970 ERROR (GlobalDefaultExceptionHandler.java:61)- http://192.168.1.81:8080/file/download<:=====:>GET<:=====:>fileName=xbb.jpg<:=====:>Could not find acceptable representation
+2018-08-07 09:56:43,975 ERROR (GlobalDefaultExceptionHandler.java:93)- class org.springframework.web.HttpMediaTypeNotAcceptableException:Could not find acceptable representation
+2018-08-07 09:56:44,264 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-08-07 09:56:44,368 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: e658973591424708958523c07056f279(String), 临时用户(String), 192.168.1.81(String), /file/download(String), 192.168.1.81(String), 4653(Integer), null, null, 2018-08-07 09:56:43.969(Timestamp), Could not find acceptable representation(String), fileName=xbb.jpg(String)
+2018-08-07 09:56:44,402 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-08-07 09:56:44,440 ERROR (GlobalDefaultExceptionHandler.java:61)- http://192.168.1.81:8080/file/download<:=====:>GET<:=====:>fileName=xbb.jpg<:=====:>Could not find acceptable representation
+2018-08-07 09:56:44,441 ERROR (GlobalDefaultExceptionHandler.java:93)- class org.springframework.web.HttpMediaTypeNotAcceptableException:Could not find acceptable representation
+2018-08-07 09:56:44,441 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into log (id, userId, req_ip, req_uri, req_host, req_port, error_code, error_message, create_time, real_error_message, parameter) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-08-07 09:56:44,442 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: de827bfd9c1241189a7d00205d6df9ae(String), 临时用户(String), 192.168.1.81(String), /file/download(String), 192.168.1.81(String), 4653(Integer), null, null, 2018-08-07 09:56:44.439(Timestamp), Could not find acceptable representation(String), fileName=xbb.jpg(String)
+2018-08-07 09:56:44,474 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-08-07 17:56:58,161 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 7660 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-07 17:56:58,165 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-07 17:56:58,167 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-07 17:57:11,002 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 13.565 seconds (JVM running for 16.718)
+2018-08-07 17:57:19,051 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 7660 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-07 17:57:19,053 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-07 17:57:19,053 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-07 17:57:24,232 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 5.255 seconds (JVM running for 29.947)
+2018-08-07 17:57:28,485 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 7660 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-07 17:57:28,486 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-07 17:57:28,487 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-07 17:57:32,182 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.78 seconds (JVM running for 37.897)
+2018-08-07 17:58:27,159 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 7660 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-07 17:58:27,159 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-07 17:58:27,160 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-07 17:58:30,619 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.567 seconds (JVM running for 96.333)
+2018-08-07 17:58:34,060 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 7660 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-07 17:58:34,061 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-07 17:58:34,061 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-07 17:58:37,633 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.627 seconds (JVM running for 103.346)
+2018-08-07 17:58:39,242 INFO (TokenAuthorFilter.java:100)- token filter过滤ok!
+2018-08-07 17:58:39,562 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select product.id productId,product.name productName,data.price,data.unit FROM jzz_data data LEFT JOIN jzz_product_info product ON data.name=product.name 
+2018-08-07 17:58:39,695 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-08-07 17:58:39,742 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 79
+2018-08-07 17:59:25,476 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 7660 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-07 17:59:25,477 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-07 17:59:25,477 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-07 17:59:29,535 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 4.122 seconds (JVM running for 155.247)
+2018-08-07 17:59:40,083 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 7660 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-07 17:59:40,084 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-07 17:59:40,084 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-07 17:59:43,893 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 3.88 seconds (JVM running for 169.604)
+2018-08-07 17:59:46,331 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 7660 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-07 17:59:46,331 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-07 17:59:46,331 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-07 17:59:50,934 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 4.686 seconds (JVM running for 176.645)
+2018-08-07 17:59:55,809 INFO (StartupInfoLogger.java:50)- Starting PricePublishingSystemApplication on 2016-20170502RH with PID 7660 (E:\svn\price-publishing-system\target\classes started by Administrator in E:\svn\price-publishing-system)
+2018-08-07 17:59:55,810 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-08-07 17:59:55,810 INFO (SpringApplication.java:663)- The following profiles are active: dev
+2018-08-07 18:00:00,177 INFO (StartupInfoLogger.java:59)- Started PricePublishingSystemApplication in 4.42 seconds (JVM running for 185.888)
+2018-08-07 18:00:04,034 INFO (TokenAuthorFilter.java:100)- token filter过滤ok!
+2018-08-07 18:00:04,129 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select product.id productId,product.name productName,data.price,data.unit FROM jzz_data data LEFT JOIN jzz_product_info product ON data.name=product.name 
+2018-08-07 18:00:04,142 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-08-07 18:00:04,161 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 79

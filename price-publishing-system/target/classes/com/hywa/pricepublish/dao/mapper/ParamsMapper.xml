@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hywa.pricepublish.dao.mapper.ParamsMapper" >
+  <resultMap id="BaseResultMap" type="com.hywa.pricepublish.dao.entity.Params" >
+    <id column="group_code" property="groupCode" jdbcType="VARCHAR" />
+    <result column="member_code" property="memberCode" jdbcType="VARCHAR" />
+    <result column="param_key" property="paramKey" jdbcType="VARCHAR" />
+    <result column="param_value" property="paramValue" jdbcType="VARCHAR" />
+    <result column="param_type" property="paramType" jdbcType="SMALLINT" />
+    <result column="param_status" property="paramStatus" jdbcType="SMALLINT" />
+    <result column="note" property="note" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    group_code, member_code, param_key, param_value, param_type, param_status, note
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.hywa.pricepublish.dao.entity.ParamsExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from params
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from params
+    where group_code = #{groupCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from params
+    where group_code = #{groupCode,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.hywa.pricepublish.dao.entity.ParamsExample" >
+    delete from params
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.hywa.pricepublish.dao.entity.Params" >
+    insert into params (group_code, member_code, param_key, 
+      param_value, param_type, param_status, 
+      note)
+    values (#{groupCode,jdbcType=VARCHAR}, #{memberCode,jdbcType=VARCHAR}, #{paramKey,jdbcType=VARCHAR}, 
+      #{paramValue,jdbcType=VARCHAR}, #{paramType,jdbcType=SMALLINT}, #{paramStatus,jdbcType=SMALLINT}, 
+      #{note,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.hywa.pricepublish.dao.entity.Params" >
+    insert into params
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="groupCode != null" >
+        group_code,
+      </if>
+      <if test="memberCode != null" >
+        member_code,
+      </if>
+      <if test="paramKey != null" >
+        param_key,
+      </if>
+      <if test="paramValue != null" >
+        param_value,
+      </if>
+      <if test="paramType != null" >
+        param_type,
+      </if>
+      <if test="paramStatus != null" >
+        param_status,
+      </if>
+      <if test="note != null" >
+        note,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="groupCode != null" >
+        #{groupCode,jdbcType=VARCHAR},
+      </if>
+      <if test="memberCode != null" >
+        #{memberCode,jdbcType=VARCHAR},
+      </if>
+      <if test="paramKey != null" >
+        #{paramKey,jdbcType=VARCHAR},
+      </if>
+      <if test="paramValue != null" >
+        #{paramValue,jdbcType=VARCHAR},
+      </if>
+      <if test="paramType != null" >
+        #{paramType,jdbcType=SMALLINT},
+      </if>
+      <if test="paramStatus != null" >
+        #{paramStatus,jdbcType=SMALLINT},
+      </if>
+      <if test="note != null" >
+        #{note,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.hywa.pricepublish.dao.entity.ParamsExample" resultType="java.lang.Integer" >
+    select count(*) from params
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update params
+    <set >
+      <if test="record.groupCode != null" >
+        group_code = #{record.groupCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.memberCode != null" >
+        member_code = #{record.memberCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.paramKey != null" >
+        param_key = #{record.paramKey,jdbcType=VARCHAR},
+      </if>
+      <if test="record.paramValue != null" >
+        param_value = #{record.paramValue,jdbcType=VARCHAR},
+      </if>
+      <if test="record.paramType != null" >
+        param_type = #{record.paramType,jdbcType=SMALLINT},
+      </if>
+      <if test="record.paramStatus != null" >
+        param_status = #{record.paramStatus,jdbcType=SMALLINT},
+      </if>
+      <if test="record.note != null" >
+        note = #{record.note,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update params
+    set group_code = #{record.groupCode,jdbcType=VARCHAR},
+      member_code = #{record.memberCode,jdbcType=VARCHAR},
+      param_key = #{record.paramKey,jdbcType=VARCHAR},
+      param_value = #{record.paramValue,jdbcType=VARCHAR},
+      param_type = #{record.paramType,jdbcType=SMALLINT},
+      param_status = #{record.paramStatus,jdbcType=SMALLINT},
+      note = #{record.note,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hywa.pricepublish.dao.entity.Params" >
+    update params
+    <set >
+      <if test="memberCode != null" >
+        member_code = #{memberCode,jdbcType=VARCHAR},
+      </if>
+      <if test="paramKey != null" >
+        param_key = #{paramKey,jdbcType=VARCHAR},
+      </if>
+      <if test="paramValue != null" >
+        param_value = #{paramValue,jdbcType=VARCHAR},
+      </if>
+      <if test="paramType != null" >
+        param_type = #{paramType,jdbcType=SMALLINT},
+      </if>
+      <if test="paramStatus != null" >
+        param_status = #{paramStatus,jdbcType=SMALLINT},
+      </if>
+      <if test="note != null" >
+        note = #{note,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where group_code = #{groupCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hywa.pricepublish.dao.entity.Params" >
+    update params
+    set member_code = #{memberCode,jdbcType=VARCHAR},
+      param_key = #{paramKey,jdbcType=VARCHAR},
+      param_value = #{paramValue,jdbcType=VARCHAR},
+      param_type = #{paramType,jdbcType=SMALLINT},
+      param_status = #{paramStatus,jdbcType=SMALLINT},
+      note = #{note,jdbcType=VARCHAR}
+    where group_code = #{groupCode,jdbcType=VARCHAR}
+  </update>
+</mapper>
